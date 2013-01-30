@@ -1,0 +1,19 @@
+body 
+{
+background-image:url('assets/omfgdogs.gif');
+}
+
+#footer 
+{
+position: absolute;
+text-align: right;
+border-style: dashed;
+bottom: 0;
+right: 5px;
+width: 100%;
+height: 50px;
+font-size: 20px;
+font-family: verdana;
+background-color: aqua;
+color: red;
+}
