@@ -1,0 +1,46 @@
+body {
+	color: black;
+	background-color: rgb(190,220,150);
+	width:80%;
+	font-size: 14px;
+	font-family: Calibri;
+}
+
+#header, h1, h4 {
+	font-family: "Copperplate Gothic Light";
+}
+
+#header{
+	position: relative;
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    background-color: rgba(0,0,0,0.5);
+    text-align: center;
+    color: white;
+	float: right;
+	width:100%;
+}
+
+#homeelem{
+	position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    background-color: rgba(0,0,0,.2);
+    text-align: center;
+	width:100%;
+}
+
+#footer {
+    position: fixed;
+    bottom: 0;
+    height: 32px;
+    font-size: 28px;
+    background-color: rgba(0,0,0,0.5);
+    color: #DDD;
+}
+
+a{
+	color: white;
+}
