@@ -12,10 +12,10 @@ p, li, h4 {
 	text-align: center;
 }
 
-#header, h1, h4 {
+#header, #footer, h1, h4 {
 	font-family: Verdana-Bold;
 }
 
 h1{
-	font-size: 40px;
+	font-size: 30px;
 }
