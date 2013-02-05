@@ -1,3 +1,7 @@
 body {
-	width:100%;
+	width:97%;
+}
+
+p, li {
+	font-size: 20px;
 }
