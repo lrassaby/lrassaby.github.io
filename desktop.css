@@ -3,11 +3,11 @@ body {
 	background-color: rgb(190,220,150);
 	width:80%;
 	font-size: 14px;
-	font-family: Calibri;
+	font-family: Calibri, Verdana;
 }
 
 #header, h1, h4 {
-	font-family: "Copperplate Gothic Light";
+	font-family: "Copperplate Gothic Light", Georgia;
 }
 
 #header{

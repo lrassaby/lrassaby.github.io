@@ -1,7 +1,21 @@
 body {
 	width:95%;
+	font-family: Georgia;
 }
 
 p, li, h4 {
 	font-size: 20px;
+}
+
+#footer {
+	width: 100%;
+	text-align: center;
+}
+
+#header, h1, h4 {
+	font-family: Impact;
+}
+
+#header{
+	box-shadow: 10px 10px 5px #888;
 }
