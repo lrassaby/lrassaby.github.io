@@ -2,6 +2,6 @@ body {
 	width:95%;
 }
 
-p, li {
-	font-size: 30px;
+p, li, h4 {
+	font-size: 20px;
 }
