@@ -16,11 +16,10 @@ function findMyLocation() {
 	if(navigator.geolocation) {
 		navigator.geolocation.getCurrentPosition(function(position) {
 			pos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-			content = "<h2> My Location </h2>";
 			infowindow = new google.maps.InfoWindow({
 				map: map,
 				position: pos,
-				content: content;
+				content: "<h2> My Location </h2>"
 			});
 		}, function() {
 			message = document.createTextNode("Error: cannot get geolocation.")
@@ -29,7 +28,7 @@ function findMyLocation() {
 		message = document.createTextNode("Error: your browser's too old for this.")
 		printError(message);
 	}
-	infowindow.content += "The closest station is: "
+	infowindow.content += "blah";
 }
 
 function printError(message) {
