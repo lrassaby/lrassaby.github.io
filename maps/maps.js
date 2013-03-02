@@ -19,16 +19,16 @@ function findMyLocation() {
 			infowindow = new google.maps.InfoWindow({
 				map: map,
 				position: pos,
-				content: "<h2> My Location </h2>"
+				content: "<h3> My Location </h3>"
 			});
 		}, function() {
 			message = document.createTextNode("Error: cannot get geolocation.")
+			printError(message);
 		});
 	} else {  // Browser doesn't support Geolocation
 		message = document.createTextNode("Error: your browser's too old for this.")
 		printError(message);
 	}
-	infowindow.content += "blah";
 }
 
 function printError(message) {
