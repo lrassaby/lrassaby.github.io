@@ -1,4 +1,5 @@
 var map;
+var mypos = null;
 var json_response = [];
 var lat = 42.30321;
 var lng = -71.09047;
@@ -28,7 +29,7 @@ function initialize() {
 	makeRedLine();
 	mapRedLine();
 	getJSONlisting();
-	mypos = findMyLocation();
+	findMyLocation();
 	if(mypos != null) findClosestMarker(mypos);
 }
 
@@ -70,7 +71,6 @@ function makeRedLine() {
 }
 		
 function findMyLocation() {
-	var mypos;
 	if(navigator.geolocation) {
 		navigator.geolocation.getCurrentPosition(
 			function(position) {
@@ -88,16 +88,13 @@ function findMyLocation() {
 			function() {
 				message = document.createTextNode("Error: cannot get geolocation. You may be blocking it.")
 				printMessage(message);
-				mypos = null;
 			}
 		);
 	}
 	else {  // Browser doesn't support Geolocation
 		message = document.createTextNode("Error: your browser has no support for geolocation.")
 		printMessage(message);
-		mypos = null;
 	}
-	return mypos;
 }
 
 function getJSONlisting() {
@@ -158,7 +155,7 @@ function printMessage(message) {
 
 function rad(x) {return x*Math.PI/180;}
 
-function findClosestMarker(mypos) {
+function findClosestMarker() {
 	var lat = mypos.latLng.lat();
     var lng = mypos.latLng.lng();
     var R = 6371; // radius of earth in km
