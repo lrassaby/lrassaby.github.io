@@ -30,7 +30,7 @@ function initialize() {
 	mapRedLine();
 	getJSONlisting();
 	findMyLocation();
-	mypos = markers[1].position;
+	//mypos = new google.maps.LatLng(42.3,-71.1);
 	if(mypos != null) findClosestMarker(mypos);
 	else printMessage(document.createTextNode("Error: unable to find closest station."))
 }
@@ -89,7 +89,7 @@ function findMyLocation() {
 				markers.push(positionmarker);
 			}, 
 			function() {
-				printMessage(document.createTextNode("Error: cannot get geolocation. You may be blocking it."));
+				printMessage(document.createTextNode("Error: cannot get geolocation. You may have it turned off."));
 			}
 		);
 	}
@@ -155,8 +155,8 @@ function printMessage(message) {
 function rad(x) {return x*Math.PI/180;}
 
 function findClosestMarker() {
-	var lat = mypos.latLng.lat();
-    var lng = mypos.latLng.lng();
+	var lat = mypos.hb;
+    var lng = mypos.ib;
     var R = 6371; // radius of earth in km
     var distances = [];
     var closest = -1;
