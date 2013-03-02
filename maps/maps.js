@@ -78,7 +78,7 @@ function findMyLocation() {
 				infowindow = new google.maps.InfoWindow({
 					map: map,
 					position: mypos, 
-					content: "<h3> Found you! </h3> Closest station is " + station.title + " at a distance of " + station.distance + "."
+					content: "<h3> Found you! </h3> Closest station is <strong>" + station.title + "</strong> at a distance of " + station.distance.toFixed(2) + " kilometers."
 				});
 				positionmarker = new google.maps.Marker({
 					map: map,
