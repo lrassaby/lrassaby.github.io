@@ -30,9 +30,6 @@ function initialize() {
 	mapRedLine();
 	getJSONlisting();
 	findMyLocation();
-	//mypos = new google.maps.LatLng(42.3,-71.1);
-	if(mypos != null) findClosestMarker(mypos);
-	else printMessage(document.createTextNode("Error: unable to find closest station."))
 }
 
 function makeRedLine() {
@@ -77,15 +74,17 @@ function findMyLocation() {
 		navigator.geolocation.getCurrentPosition(
 			function(position) {
 				mypos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+				station = findClosestMarker(mypos);
 				infowindow = new google.maps.InfoWindow({
 					map: map,
 					position: mypos, 
-					content: "<h3> Found you! </h3>"
+					content: "<h3> Found you! </h3> Closest station is " + station.title + " at a distance of " + station.distance + "."
 				});
 				positionmarker = new google.maps.Marker({
 					map: map,
 					position: mypos
 				});
+				
 			}, 
 			function() {
 				printMessage(document.createTextNode("Error: cannot get geolocation. You may have it turned off."));
@@ -154,14 +153,14 @@ function printMessage(message) {
 function rad(x) {return x*Math.PI/180;}
 
 function findClosestMarker() {
-	var lat = mypos.hb;
-    var lng = mypos.ib;
+	var lat = mypos.lat();
+    var lng = mypos.lng();
     var R = 6371; // radius of earth in km
     var distances = [];
     var closest = -1;
     for(var i=0; i < markers.length; i++) {
-        var mlat = markers[i].position.hb;
-        var mlng = markers[i].position.ib;
+        var mlat = markers[i].position.lat();
+        var mlng = markers[i].position.lng();
         var dLat  = rad(mlat - lat);
         var dLong = rad(mlng - lng);
         var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
@@ -173,5 +172,8 @@ function findClosestMarker() {
             closest = i;
         }
     }
-    alert(markers[closest].title);
+    station = new Object();
+    station.title = markers[closest].title;
+    station.distance = distances[closest];
+    return(station);
 }
