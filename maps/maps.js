@@ -173,7 +173,8 @@ function findClosestMarker() {
         }
     }
     station = new Object();
+    station.position = markers[closest].position;
     station.title = markers[closest].title;
     station.distance = distances[closest];
-    return(station);
+    return station;
 }
