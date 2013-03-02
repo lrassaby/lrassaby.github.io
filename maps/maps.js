@@ -56,7 +56,7 @@ function findMyLocation() {
 			pos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
 			infowindow = new google.maps.InfoWindow({
 				map: map,
-				position: pos, */
+				position: pos, 
 				content = "<h3> Found you! </h3>";
 			});
 			positionmarker = new google.maps.Marker({
