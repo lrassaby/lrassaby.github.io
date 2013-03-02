@@ -72,23 +72,23 @@ function mapRedLine() {
 		path: redline_north,
 		strokeColor: "#FF0000",
 		strokeOpacity: 1.0,
-		strokeWeight: 15
+		strokeWeight: 5
 	});
 	redline_ashmont_pline = new google.maps.Polyline({
 		path: redline_ashmont,
 		strokeColor: "#FF0000",
 		strokeOpacity: 1.0,
-		strokeWeight: 15
+		strokeWeight: 5
 	});
 	redline_braintree_pline = new google.maps.Polyline({
 		path: redline_braintree,
 		strokeColor: "#FF0000",
 		strokeOpacity: 1.0,
-		strokeWeight: 15
+		strokeWeight: 5
 	});
-	redline_north_pline.setmap(map);
-	redline_ashmont_pline.setmap(map);
-	redline_braintree_pline.setmap(map);
+	redline_north_pline.setMap(map);
+	redline_ashmont_pline.setMap(map);
+	redline_braintree_pline.setMap(map);
 }
 
 function printMessage(message) {
