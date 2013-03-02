@@ -9,7 +9,6 @@ body {
 	width: auto;
 	border: 20px solid rgb(21,98,0);
 	border-radius: 25px 25px 25px 25px;
-	height: 100%;
 }
 
 #topbar {
@@ -24,5 +23,5 @@ body {
 }
 
 #canvas {
-	height:73%;
+	height:500px;
 }
