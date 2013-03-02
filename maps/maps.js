@@ -54,11 +54,11 @@ function findMyLocation() {
 	if(navigator.geolocation) {
 		navigator.geolocation.getCurrentPosition(function(position) {
 			pos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-			/*infowindow = new google.maps.InfoWindow({
+			infowindow = new google.maps.InfoWindow({
 				map: map,
 				position: pos, */
 				content = "<h3> Found you! </h3>";
-			/*});*/
+			});
 			positionmarker = new google.maps.Marker({
 				map: map,
 				position: pos, 
@@ -96,11 +96,6 @@ function mapRedLine() {
 		strokeOpacity: 1.0,
 		strokeWeight: 5
 	});
-	/*
-	redline_north_pline.setMap(map);
-	redline_ashmont_pline.setMap(map);
-	redline_braintree_pline.setMap(map);
-	*/
 }
 
 function printMessage(message) {
