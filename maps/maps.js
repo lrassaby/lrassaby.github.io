@@ -30,7 +30,7 @@ function initialize() {
 	mapRedLine();
 	getJSONlisting();
 	findMyLocation();
-	printMessage(document.createTextNode("mypos is 2: " + markers[0]);
+	printMessage(document.createTextNode("mypos is 2: " + markers[0]));
 	if(mypos != null) findClosestMarker(mypos);
 	else printMessage(document.createTextNode("Error: unable to find closest station."))
 }
