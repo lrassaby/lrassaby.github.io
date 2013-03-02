@@ -64,7 +64,6 @@ function findMyLocation() {
 				position: pos, 
 				title: content
 			});
-							meMarker.setMap(map);
 		}, function() {
 			message = document.createTextNode("Error: cannot get geolocation. You may be blocking it.")
 			printMessage(message);
