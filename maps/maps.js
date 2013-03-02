@@ -4,7 +4,7 @@ var lng = -71.11619;
 
 function initialize() {
 	mapOptions = {
-		zoom: 11, 
+		zoom: 12, 
 		center: new google.maps.LatLng(lat, lng),
 		mapTypeId: google.maps.MapTypeId.ROADMAP
 	};

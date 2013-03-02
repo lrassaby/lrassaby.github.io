@@ -1,7 +1,6 @@
 body {
 	font-family: verdana;
 	background: black;
-	color: white;
 	padding: 0px;
 	width: auto;
 	border: 20px solid rgb(21,98,0);
@@ -15,6 +14,7 @@ p {
 	border-bottom: 20px solid rgb(21,98,0);
 	text-align: center;
 	background: solid rgba(50,86,46,1);
+	color: white;
 }
 #canvas {
 	height:500px;
