@@ -16,6 +16,7 @@ function initialize() {
 	};
 	map = new google.maps.Map(document.getElementById("canvas"), mapOptions);
 	makeRedLine();
+	mapRedLine();
 	findMyLocation();
 }
 
