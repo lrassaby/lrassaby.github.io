@@ -74,7 +74,19 @@ function makeRedLine() {
 function findMyLocation() {
 	if(navigator.geolocation) {
 		navigator.geolocation.getCurrentPosition(
-			printMe(),
+			function(position) {
+				mypos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+				infowindow = new google.maps.InfoWindow({
+					map: map,
+					position: mypos, 
+					content: "<h3> Found you! </h3>"
+				});
+				positionmarker = new google.maps.Marker({
+					map: map,
+					position: mypos
+				});
+				markers.push(positionmarker);
+			}, 
 			function() {
 				printMessage(document.createTextNode("Error: cannot get geolocation. You may be blocking it."));
 			}
@@ -83,19 +95,6 @@ function findMyLocation() {
 	else {  // Browser doesn't support Geolocation
 		printMessage(document.createTextNode("Error: your browser has no support for geolocation."));
 	}
-}
-
-function printMe() {
-	mypos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-	infowindow = new google.maps.InfoWindow({
-		map: map,
-		position: mypos, 
-		content: "<h3> Found you! </h3>"
-	});
-	positionmarker = new google.maps.Marker({
-		map: map,
-		position: mypos
-	});
 }
 
 function getJSONlisting() {
@@ -160,7 +159,7 @@ function findClosestMarker() {
     var R = 6371; // radius of earth in km
     var distances = [];
     var closest = -1;
-    for(var i=0; i < map.markers.length; i++) {
+    for(var i=0; i < markers.length; i++) {
         var mlat = map.markers[i].position.lat();
         var mlng = map.markers[i].position.lng();
         var dLat  = rad(mlat - lat);
