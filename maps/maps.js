@@ -180,6 +180,7 @@ function findClosestMarker() {
         }
     }
     station = new Object();
+    station.positionArr = [];
     station.positionArr[0] = markers[closest].position;
     station.positionArr[1] = mypos;
     station.title = markers[closest].title;
