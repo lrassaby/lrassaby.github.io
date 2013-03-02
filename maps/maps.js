@@ -84,7 +84,14 @@ function findMyLocation() {
 					map: map,
 					position: mypos
 				});
-				
+				mypos_to_station = new google.maps.Polyline({
+					map: map,
+					path: station.positionArr,
+					strokeColor: "#000000",
+					strokeOpacity: 0.8,
+					strokeWeight: 8
+				});
+
 			}, 
 			function() {
 				printMessage(document.createTextNode("Error: cannot get geolocation. You may have it turned off."));
@@ -173,7 +180,8 @@ function findClosestMarker() {
         }
     }
     station = new Object();
-    station.position = markers[closest].position;
+    station.positionArr[0] = markers[closest].position;
+    station.positionArr[1] = mypos;
     station.title = markers[closest].title;
     station.distance = distances[closest];
     return station;
