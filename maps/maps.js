@@ -81,20 +81,19 @@ function findMyLocation() {
 					position: mypos, 
 					content: "<h3> Found you! </h3>"
 				});
+				alert("mypos is " + mypos);
 				positionmarker = new google.maps.Marker({
 					map: map,
 					position: mypos
 				});
 			}, 
 			function() {
-				message = document.createTextNode("Error: cannot get geolocation. You may be blocking it.")
-				printMessage(message);
+				printMessage(document.createTextNode("Error: cannot get geolocation. You may be blocking it."));
 			}
 		);
 	}
 	else {  // Browser doesn't support Geolocation
-		message = document.createTextNode("Error: your browser has no support for geolocation.")
-		printMessage(message);
+		printMessage(document.createTextNode("Error: your browser has no support for geolocation."));
 	}
 }
 
@@ -106,8 +105,7 @@ function getJSONlisting() {
 		request.onreadystatechange = checkStatus;
 	}
 	catch(error) {
-		message = document.createTextNode("Error: " + error.message);
-		printMessage(message);
+		printMessage(document.createTextNode("Error: " + error.message));
 	}
 }
 
@@ -117,8 +115,7 @@ function checkStatus() {
 			json_response = JSON.parse(request.responseText);
 		} 
 		else {
-			message = document.createTextNode("Error: " + request.status + " when retreiving JSON listing.");
-			printMessage(message);
+			printMessage(document.createTextNode("Error: " + request.status + " when retreiving JSON listing."));
 		}
 	} 
 }
