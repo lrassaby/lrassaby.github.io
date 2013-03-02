@@ -81,7 +81,6 @@ function findMyLocation() {
 					position: mypos, 
 					content: "<h3> Found you! </h3>"
 				});
-				alert("mypos is " + mypos);
 				positionmarker = new google.maps.Marker({
 					map: map,
 					position: mypos
@@ -95,6 +94,7 @@ function findMyLocation() {
 	else {  // Browser doesn't support Geolocation
 		printMessage(document.createTextNode("Error: your browser has no support for geolocation."));
 	}
+	alert("mypos2 is " + mypos);
 }
 
 function getJSONlisting() {
