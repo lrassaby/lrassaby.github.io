@@ -6,16 +6,19 @@ body {
 	border: 20px solid rgb(21,98,0);
 	border-radius: 25px 25px 25px 25px;
 }
-p {
-	color: red;
-	text-align: left;
-}
+
 #topbar {
 	border-bottom: 20px solid rgb(21,98,0);
 	text-align: center;
 	background: solid rgba(50,86,46,1);
 	color: white;
 }
+
+p {
+	color: red;
+	text-align: left;
+}
+
 #canvas {
 	height:500px;
 }
