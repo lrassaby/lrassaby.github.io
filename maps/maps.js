@@ -126,21 +126,21 @@ function mapRedLine() {
 		map: map,
 		path: redline_north,
 		strokeColor: red,
-		strokeOpacity: 1.0,
+		strokeOpacity: 0.5,
 		strokeWeight: 5
 	});
 	redline_ashmont_pline = new google.maps.Polyline({
 		map: map,
 		path: redline_ashmont,
 		strokeColor: red,
-		strokeOpacity: 1.0,
+		strokeOpacity: 0.5,
 		strokeWeight: 5
 	});
 	redline_braintree_pline = new google.maps.Polyline({
 		map: map,
 		path: redline_braintree,
 		strokeColor: red,
-		strokeOpacity: 1.0,
+		strokeOpacity: 0.5,
 		strokeWeight: 5
 	});
 	
