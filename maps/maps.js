@@ -74,18 +74,7 @@ function makeRedLine() {
 function findMyLocation() {
 	if(navigator.geolocation) {
 		navigator.geolocation.getCurrentPosition(
-			function(position) {
-				mypos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-				infowindow = new google.maps.InfoWindow({
-					map: map,
-					position: mypos, 
-					content: "<h3> Found you! </h3>"
-				});
-				positionmarker = new google.maps.Marker({
-					map: map,
-					position: mypos
-				});
-			}, 
+			printMe(position),
 			function() {
 				printMessage(document.createTextNode("Error: cannot get geolocation. You may be blocking it."));
 			}
@@ -94,6 +83,19 @@ function findMyLocation() {
 	else {  // Browser doesn't support Geolocation
 		printMessage(document.createTextNode("Error: your browser has no support for geolocation."));
 	}
+}
+
+function printMe(position) {
+	mypos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+	infowindow = new google.maps.InfoWindow({
+		map: map,
+		position: mypos, 
+		content: "<h3> Found you! </h3>"
+	});
+	positionmarker = new google.maps.Marker({
+		map: map,
+		position: mypos
+	});
 }
 
 function getJSONlisting() {
