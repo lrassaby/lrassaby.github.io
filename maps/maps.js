@@ -70,6 +70,7 @@ function makeRedLine() {
 }
 		
 function findMyLocation() {
+	var mypos;
 	if(navigator.geolocation) {
 		navigator.geolocation.getCurrentPosition(
 			function(position) {
