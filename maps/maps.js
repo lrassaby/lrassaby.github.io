@@ -3,9 +3,16 @@ var mypos;
 var json_response = [];
 var lat = 42.30321;
 var lng = -71.09047;
+
 var redline_north = [];
+var north_names = ["Alewife Station", "Davis Station", "Porter Square Station", "Harvard Square Station", "Central Square Station", "Kendall/MIT Station", "Charles/MGH Station", "Park St. Station", "Downtown Crossing Station", "South Station", "Broadway Station", "Andrew Station", "JFK/UMass Station"];
+
 var redline_braintree = [];
+var braintree_names = ["JFK/UMass Station", "North Quincy Station", "Wollaston Station", "Quincy Center Station", "Quincy Adams Station", "Braintree Station"];
+
 var redline_ashmont = [];
+var ashmont_names = ["JFK/UMass Station", "Savin Hill Station", "Fields Corner Station", "Shawmut Station", "Ashmont Station"];
+
 var t_icon = "assets/tsymbol.png";
 var carmen = "assets/carmen.png";
 var waldo = "assets/waldo.png";
@@ -47,10 +54,19 @@ function makeRedLine() {
 	redline_ashmont.push(new google.maps.LatLng(42.29312583,-71.06573796)); // shawmut
 	redline_ashmont.push(new google.maps.LatLng(42.284652,-71.064489));		// ashmont
 	redline_braintree.push(new google.maps.LatLng(42.275275,-71.029583));	// north quincy
-	redline_braintree.push(new google.maps.LatLng(42.2665139,-71.0203369)); // wolllaston
+	redline_braintree.push(new google.maps.LatLng(42.2665139,-71.0203369)); // wollaston
 	redline_braintree.push(new google.maps.LatLng(42.251809,-71.005409));	// quincy center
 	redline_braintree.push(new google.maps.LatLng(42.233391,-71.007153));	// quincy adams
 	redline_braintree.push(new google.maps.LatLng(42.2078543,-71.0011385)); // braintree
+	for(var i in redline_north) {
+		markers.push(new google.maps.Marker({title: north_names[i], position: redline_north[i], icon: t_icon, map: map}));
+	}
+	for(var i in redline_ashmont) {
+		markers.push(new google.maps.Marker({title: ashmont_names[i], position: redline_ashmont[i],  icon: t_icon, map: map}));
+	}
+	for(var i in redline_braintree) {
+		markers.push(new google.maps.Marker({title: braintree_names[i], position: redline_braintree[i], icon: t_icon, map: map}));
+	}
 }
 		
 function findMyLocation() {
@@ -127,6 +143,7 @@ function mapRedLine() {
 		strokeOpacity: 1.0,
 		strokeWeight: 5
 	});
+	
 }
 
 function printMessage(message) {
