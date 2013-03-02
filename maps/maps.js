@@ -31,6 +31,7 @@ function initialize() {
 	getJSONlisting();
 	findMyLocation();
 	if(mypos != null) findClosestMarker(mypos);
+	else printMessage(document.createTextNode("Error: unable to find closest station."))
 }
 
 function makeRedLine() {
@@ -149,7 +150,7 @@ function mapRedLine() {
 
 function printMessage(message) {
 	errorbar = document.getElementById("error");
-	errorbar.appendChild(document.createElement("p"));
+	errorbar.appendChild(document.createElement("br"));
 	errorbar.appendChild(message)
 }
 
