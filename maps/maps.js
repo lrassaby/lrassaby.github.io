@@ -57,12 +57,12 @@ function findMyLocation() {
 			infowindow = new google.maps.InfoWindow({
 				map: map,
 				position: pos, 
-				content = "<h3> Found you! </h3>";
+				content = "<h3> Found you! </h3>"
 			});
 			positionmarker = new google.maps.Marker({
 				map: map,
 				position: pos, 
-				title: content
+				title: "Your location"
 			});
 		}, function() {
 			message = document.createTextNode("Error: cannot get geolocation. You may be blocking it.")
