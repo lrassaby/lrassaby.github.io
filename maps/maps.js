@@ -30,7 +30,6 @@ function initialize() {
 	mapRedLine();
 	getJSONlisting();
 	findMyLocation();
-	printMessage(document.createTextNode("mypos is 2: " + markers[0]));
 	if(mypos != null) findClosestMarker(mypos);
 	else printMessage(document.createTextNode("Error: unable to find closest station."))
 }
@@ -86,8 +85,6 @@ function findMyLocation() {
 					map: map,
 					position: mypos
 				});
-				markers.push(mypos);
-				alert("mypos is: " + mypos);
 			}, 
 			function() {
 				printMessage(document.createTextNode("Error: cannot get geolocation. You may be blocking it."));
