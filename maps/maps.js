@@ -29,7 +29,7 @@ function initialize() {
 	makeRedLine();
 	mapRedLine();
 	getJSONlisting();
-	findMyLocation();
+	mypos = findMyLocation();
 	if(mypos != null) findClosestMarker(mypos);
 	else printMessage(document.createTextNode("Error: unable to find closest station."))
 }
@@ -85,6 +85,7 @@ function findMyLocation() {
 					map: map,
 					position: mypos
 				});
+				return mypos;
 			}, 
 			function() {
 				printMessage(document.createTextNode("Error: cannot get geolocation. You may be blocking it."));
@@ -94,7 +95,6 @@ function findMyLocation() {
 	else {  // Browser doesn't support Geolocation
 		printMessage(document.createTextNode("Error: your browser has no support for geolocation."));
 	}
-	alert("mypos2 is " + mypos);
 }
 
 function getJSONlisting() {
