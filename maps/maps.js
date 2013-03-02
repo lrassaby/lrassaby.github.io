@@ -30,7 +30,7 @@ function initialize() {
 	mapRedLine();
 	getJSONlisting();
 	findMyLocation();
-	//mypos = new google.maps.LatLng(42.3,-71.1);
+	mypos = new google.maps.LatLng(42.3,-71.1);
 	if(mypos != null) findClosestMarker(mypos);
 	else printMessage(document.createTextNode("Error: unable to find closest station."))
 }
