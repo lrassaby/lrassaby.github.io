@@ -1,5 +1,5 @@
 body {
-	font-family: verdana;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 	background: black;
 	padding: 0px;
 	width: auto;
@@ -12,6 +12,10 @@ body {
 	text-align: center;
 	background: solid rgba(50,86,46,1);
 	color: white;
+}
+
+#error {
+	color: rgb(175,175,175);
 }
 
 #canvas {

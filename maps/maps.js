@@ -1,6 +1,8 @@
 var map;
-var lat = 42.37501;
-var lng = -71.11619;
+var mypos;
+var json_response = [];
+var lat = 42.30321;
+var lng = -71.09047;
 var redline_north = [];
 var redline_braintree = [];
 var redline_ashmont = [];
@@ -8,17 +10,18 @@ var t_icon = "assets/tsymbol.png";
 var carmen = "assets/carmen.png";
 var waldo = "assets/waldo.png";
 var markers = [];
-
+var red = "#FF0000";
 
 function initialize() {
 	mapOptions = {
-		zoom: 12, 
+		zoom: 11, 
 		center: new google.maps.LatLng(lat, lng),
 		mapTypeId: google.maps.MapTypeId.ROADMAP
 	};
 	map = new google.maps.Map(document.getElementById("canvas"), mapOptions);
 	makeRedLine();
 	mapRedLine();
+	getJSONlisting();
 	findMyLocation();
 }
 
@@ -54,15 +57,15 @@ function findMyLocation() {
 	if(navigator.geolocation) {
 		navigator.geolocation.getCurrentPosition(
 			function(position) {
-				pos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+				mypos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
 				infowindow = new google.maps.InfoWindow({
 					map: map,
-					position: pos, 
+					position: mypos, 
 					content: "<h3> Found you! </h3>"
 				});
 				positionmarker = new google.maps.Marker({
 					map: map,
-					position: pos
+					position: mypos
 				});
 			}, 
 			function() {
@@ -93,61 +96,41 @@ function getJSONlisting() {
 function checkStatus() {
 	if(request.readyState == request.DONE) {
 		if(request.status == 200){
-			parse(request.responseText);
+			json_response = JSON.parse(request.responseText);
 		} 
 		else {
-			message = document.createTextNode("Error: " + request.status);
+			message = document.createTextNode("Error: " + request.status + " when retreiving JSON listing.");
 			printMessage(message);
 		}
 	} 
 }
 
-function parse(str) {
-		arr = JSON.parse(str);
-		list = document.getElementById("list");
-		for(i = 0; i < arr.length; i++) {
-			item = arr[i];
-	    	para = document.createElement("p");
-	    	company = document.createTextNode("Company: " + item.company);
-	    	pos = document.createTextNode("Position: " + item.position);
-	    	loc = document.createTextNode("Location: " + item.location);
-	    	para.appendChild(company);
-	    	para.appendChild(pos);
-	    	para.appendChild(loc);
-	    	for(j = 1; j < 5; j+=2) {
-		    	para.insertBefore(document.createElement("br"), para.childNodes[j]);
-	    	}
-	    	list.appendChild(para);
-	    }
-    }
-
-
 function mapRedLine() {
 	redline_north_pline = new google.maps.Polyline({
 		map: map,
 		path: redline_north,
-		strokeColor: "#FF0000",
+		strokeColor: red,
 		strokeOpacity: 1.0,
 		strokeWeight: 5
 	});
 	redline_ashmont_pline = new google.maps.Polyline({
 		map: map,
 		path: redline_ashmont,
-		strokeColor: "#FF0000",
+		strokeColor: red,
 		strokeOpacity: 1.0,
 		strokeWeight: 5
 	});
 	redline_braintree_pline = new google.maps.Polyline({
 		map: map,
 		path: redline_braintree,
-		strokeColor: "#FF0000",
+		strokeColor: red,
 		strokeOpacity: 1.0,
 		strokeWeight: 5
 	});
 }
 
 function printMessage(message) {
-	topbar = document.getElementById("topbar");
-	topbar.appendChild(document.createElement("p"));
-	topbar.appendChild(message)
+	errorbar = document.getElementById("error");
+	errorbar.appendChild(document.createElement("p"));
+	errorbar.appendChild(message)
 }
