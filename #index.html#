@@ -1,0 +1,26 @@
+s<!DOCTYPE html>
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width; 
+		initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+<link rel="stylesheet" href="desktop.css"/>
+<link rel="stylesheet" media="only screen and (max-width: 800px)" href="mobile.css"/>
+<title> Louis Rassaby </title>
+</head>
+
+<body>
+<div id="header"> 
+<h1> Louis Rassaby </h1> 
+</div>
+<div id="homeelem">
+<img src="mypicture.jpg" height = 300 width = 300 alt="Louis"/>
+</div>
+<div id="footer">
+<a href="bio.html"> Bio </a> |       
+<a href="resume.html"> Resume </a> |       
+<a href="mailto:xxxxx.xxxxxx@tufts.edu">Contact</a>
+</div>
+</body>
+
+</html>
