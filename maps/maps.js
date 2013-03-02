@@ -52,27 +52,75 @@ function makeRedLine() {
 		
 function findMyLocation() {
 	if(navigator.geolocation) {
-		navigator.geolocation.getCurrentPosition(function(position) {
-			pos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-			infowindow = new google.maps.InfoWindow({
-				map: map,
-				position: pos, 
-				content: "<h3> Found you! </h3>"
-			});
-			positionmarker = new google.maps.Marker({
-				map: map,
-				position: pos, 
-				title: "Your location"
-			});
-		}, function() {
-			message = document.createTextNode("Error: cannot get geolocation. You may be blocking it.")
-			printMessage(message);
-		});
-	} else {  // Browser doesn't support Geolocation
+		navigator.geolocation.getCurrentPosition(
+			function(position) {
+				pos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+				infowindow = new google.maps.InfoWindow({
+					map: map,
+					position: pos, 
+					content: "<h3> Found you! </h3>"
+				});
+				positionmarker = new google.maps.Marker({
+					map: map,
+					position: pos
+				});
+			}, 
+			function() {
+				message = document.createTextNode("Error: cannot get geolocation. You may be blocking it.")
+				printMessage(message);
+			}
+		);
+	}
+	else {  // Browser doesn't support Geolocation
 		message = document.createTextNode("Error: your browser has no support for geolocation.")
 		printMessage(message);
 	}
 }
+
+function getJSONlisting() {
+	try {
+		request = new XMLHttpRequest();
+		request.open("GET", "http://mbtamap-cedar.herokuapp.com/mapper/redline.json");
+		request.send(null);
+		request.onreadystatechange = checkStatus;
+	}
+	catch(error) {
+		message = document.createTextNode("Error: " + error.message);
+		printMessage(message);
+	}
+}
+
+function checkStatus() {
+	if(request.readyState == request.DONE) {
+		if(request.status == 200){
+			parse(request.responseText);
+		} 
+		else {
+			message = document.createTextNode("Error: " + request.status);
+			printMessage(message);
+		}
+	} 
+}
+
+function parse(str) {
+		arr = JSON.parse(str);
+		list = document.getElementById("list");
+		for(i = 0; i < arr.length; i++) {
+			item = arr[i];
+	    	para = document.createElement("p");
+	    	company = document.createTextNode("Company: " + item.company);
+	    	pos = document.createTextNode("Position: " + item.position);
+	    	loc = document.createTextNode("Location: " + item.location);
+	    	para.appendChild(company);
+	    	para.appendChild(pos);
+	    	para.appendChild(loc);
+	    	for(j = 1; j < 5; j+=2) {
+		    	para.insertBefore(document.createElement("br"), para.childNodes[j]);
+	    	}
+	    	list.appendChild(para);
+	    }
+    }
+
 
 function mapRedLine() {
 	redline_north_pline = new google.maps.Polyline({
