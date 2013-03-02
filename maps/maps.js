@@ -74,7 +74,7 @@ function makeRedLine() {
 function findMyLocation() {
 	if(navigator.geolocation) {
 		navigator.geolocation.getCurrentPosition(
-			printMe(position),
+			printMe(),
 			function() {
 				printMessage(document.createTextNode("Error: cannot get geolocation. You may be blocking it."));
 			}
@@ -85,7 +85,7 @@ function findMyLocation() {
 	}
 }
 
-function printMe(position) {
+function printMe() {
 	mypos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
 	infowindow = new google.maps.InfoWindow({
 		map: map,
