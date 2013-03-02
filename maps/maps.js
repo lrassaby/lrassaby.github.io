@@ -156,7 +156,7 @@ function printMessage(message) {
 function rad(x) {return x*Math.PI/180;}
 
 function findClosestMarker() {
-	if(mypos == null) return;
+	if(mypos == null) alert("my pos is null");
     var lat = mypos.latLng.lat();
     var lng = mypos.latLng.lng();
     var R = 6371; // radius of earth in km
