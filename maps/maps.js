@@ -1,5 +1,5 @@
 var map;
-var mypos = null;
+var mypos;
 var json_response = [];
 var lat = 42.30321;
 var lng = -71.09047;
