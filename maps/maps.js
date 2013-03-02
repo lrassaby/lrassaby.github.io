@@ -88,7 +88,7 @@ function findMyLocation() {
 					map: map,
 					path: station.positionArr,
 					strokeColor: "#000000",
-					strokeOpacity: 0.8,
+					strokeOpacity: 0.5,
 					strokeWeight: 8
 				});
 
@@ -158,14 +158,14 @@ function printMessage(message) {
 }
 
 function rad(x) {return x*Math.PI/180;}
-
+/* haversine formula for distance: credit to stackoverflow */
 function findClosestMarker() {
 	var lat = mypos.lat();
     var lng = mypos.lng();
     var R = 6371; // radius of earth in km
     var distances = [];
     var closest = -1;
-    for(var i=0; i < markers.length; i++) {
+    for(var i in markers) {
         var mlat = markers[i].position.lat();
         var mlng = markers[i].position.lng();
         var dLat  = rad(mlat - lat);
