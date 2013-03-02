@@ -5,6 +5,8 @@ var redline_north = [];
 var redline_braintree = [];
 var redline_ashmont = [];
 var t_icon = "assets/tsymbol.png";
+var carmen = "assets/carmen.png";
+var waldo = "assets/waldo.png";
 var markers = [];
 
 
@@ -52,11 +54,17 @@ function findMyLocation() {
 	if(navigator.geolocation) {
 		navigator.geolocation.getCurrentPosition(function(position) {
 			pos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-			infowindow = new google.maps.InfoWindow({
+			/*infowindow = new google.maps.InfoWindow({
 				map: map,
-				position: pos,
+				position: pos, */
 				content: "<h3> You are here! </h3>"
+			/*});*/
+			positionmarker = new google.maps.Marker({
+				map: map,
+				position: pos, 
+				title: content
 			});
+							meMarker.setMap(map);
 		}, function() {
 			message = document.createTextNode("Error: cannot get geolocation. You may be blocking it.")
 			printMessage(message);
@@ -69,26 +77,31 @@ function findMyLocation() {
 
 function mapRedLine() {
 	redline_north_pline = new google.maps.Polyline({
+		map: map,
 		path: redline_north,
 		strokeColor: "#FF0000",
 		strokeOpacity: 1.0,
 		strokeWeight: 5
 	});
 	redline_ashmont_pline = new google.maps.Polyline({
+		map: map,
 		path: redline_ashmont,
 		strokeColor: "#FF0000",
 		strokeOpacity: 1.0,
 		strokeWeight: 5
 	});
 	redline_braintree_pline = new google.maps.Polyline({
+		map: map,
 		path: redline_braintree,
 		strokeColor: "#FF0000",
 		strokeOpacity: 1.0,
 		strokeWeight: 5
 	});
+	/*
 	redline_north_pline.setMap(map);
 	redline_ashmont_pline.setMap(map);
 	redline_braintree_pline.setMap(map);
+	*/
 }
 
 function printMessage(message) {
