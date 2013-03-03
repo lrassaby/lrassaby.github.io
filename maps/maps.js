@@ -241,6 +241,7 @@ function printMessage(message) {
 
 function calculateDistance(pos) {
 	var R = 3963.1676; // miles
+	console.log(mypos);
 	var lat = mypos.lat();
     var lng = mypos.lng();
     var pLat = pos.lat();
