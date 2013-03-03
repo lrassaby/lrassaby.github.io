@@ -32,7 +32,6 @@ function initialize() {
 	makeRedLine();
 	mapRedLine();
 	findMyLocation();
-	findWaldoandCarmen();
 }
 
 function makeRedLine() {
@@ -135,7 +134,7 @@ function addClickListeners() {
 	}
 }
 
-function findWaldoandCarmen() {
+function findWaldoandCarmen(mypos) {
 	request = new XMLHttpRequest();
 	try {
 		request.open("GET", "http://messagehub.herokuapp.com/a3.json ");
@@ -157,7 +156,7 @@ function findWaldoandCarmen() {
 						var msg = json_response[i].loc.note;
 						var pos = new google.maps.LatLng(lat, lng);
 						new google.maps.Marker({title: name, position: pos, icon: icon, map: map});
-						var dist = calculateDistance(pos);
+						var dist = calculateDistance(mypos, pos);
 						printMessage(name + " is " + dist + " miles away. Note: " + msg);
 					}
 				} 
@@ -195,7 +194,7 @@ function findMyLocation() {
 					strokeWeight: 8
 				});
 				map.setCenter(mypos);
-
+				findWaldoandCarmen(mypos);
 			}, 
 			function() {
 				printMessage("Error: cannot get geolocation. You may have it turned off.");
@@ -205,7 +204,6 @@ function findMyLocation() {
 	else {  // Browser doesn't support Geolocation
 		printMessage("Error: your browser has no support for geolocation.");
 	}
-	console.log(mypos);
 }
 
 
@@ -240,7 +238,7 @@ function printMessage(message) {
 	errorbar.appendChild(document.createTextNode(message));
 }
 
-function calculateDistance(pos) {
+function calculateDistance(mypos, pos) {
 	var R = 3963.1676; // miles
 	console.log(mypos);
 	var lat = mypos.lat();
