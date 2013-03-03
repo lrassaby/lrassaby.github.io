@@ -205,6 +205,7 @@ function findMyLocation() {
 	else {  // Browser doesn't support Geolocation
 		printMessage("Error: your browser has no support for geolocation.");
 	}
+	console.log(mypos);
 }
 
 
