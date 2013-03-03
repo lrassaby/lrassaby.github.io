@@ -232,12 +232,12 @@ function printMessage(message) {
 	errorbar.appendChild(document.createTextNode(message));
 }
 
-function calculateDistance(point) {
+function calculateDistance(point_b) {
 	var R = 3963.1676; // miles
 	var lat = mypos.lat();
     var lng = mypos.lng();
-    var blat = point.lat();
-    var blng = point.lng();
+    var blat = point_b.lat();
+    var blng = point_b.lng();
     var dLat  = rad(blat - lat);
     var dLong = rad(blng - lng);
     var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
@@ -256,7 +256,6 @@ function findClosestMarker() {
     var distances = [];
     var closest = -1;
     for(var i in markers) {
-    /*
         var mlat = markers[i].position.lat();
         var mlng = markers[i].position.lng();
         var dLat  = rad(mlat - lat);
@@ -266,8 +265,6 @@ function findClosestMarker() {
         var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
         var d = R * c;
         distances[i] = d;
-        */
-        distances[i] = calculateDistance(markers[i].position)
         if ( closest == -1 || d < distances[closest] ) {
             closest = i;
         }
