@@ -157,7 +157,7 @@ function findWaldoandCarmen(mypos) {
 						var pos = new google.maps.LatLng(lat, lng);
 						new google.maps.Marker({title: name, position: pos, icon: icon, map: map});
 						var dist = calculateDistance(mypos, pos);
-						printMessage(name + " is " + dist + " miles away. Note: " + msg);
+						printMessage(name + " is " + dist.toFixed(2) + " miles away. Note: " + msg);
 					}
 				} 
 				else {
@@ -240,7 +240,6 @@ function printMessage(message) {
 
 function calculateDistance(mypos, pos) {
 	var R = 3963.1676; // miles
-	console.log(mypos);
 	var lat = mypos.lat();
     var lng = mypos.lng();
     var pLat = pos.lat();
