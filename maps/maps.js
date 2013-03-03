@@ -1,6 +1,6 @@
 var map;
 var mypos;
-var json_response = [];
+var json_response;
 var lat = 42.30321;
 var lng = -71.09047;
 
@@ -13,11 +13,17 @@ var braintree_names = ["JFK/UMass Station", "North Quincy Station", "Wollaston S
 var redline_ashmont = [];
 var ashmont_names = ["JFK/UMass Station", "Savin Hill Station", "Fields Corner Station", "Shawmut Station", "Ashmont Station"];
 
+
+var codes = [];
+
+
 var t_icon = "assets/tsymbol.png";
 var carmen = "assets/carmen.png";
 var waldo = "assets/waldo.png";
 var markers = [];
 var red = "#FF0000";
+
+var codes = [];
 
 function initialize() {
 	mapOptions = {
@@ -29,44 +35,74 @@ function initialize() {
 	makeRedLine();
 	mapRedLine();
 	getJSONlisting();
+	
 	findMyLocation();
 }
 
 function makeRedLine() {
 	redline_north.push(new google.maps.LatLng(42.395428,-71.142483));   	// alewife
+	codes.push(["RALEN", null]);
 	redline_north.push(new google.maps.LatLng(42.39674,-71.121815));    	// davis
+	codes.push(["RDAVN", "RDAVS"]);
 	redline_north.push(new google.maps.LatLng(42.3884,-71.119149));			// porter square
+	codes.push(["RPORN", "RPORS"]);
 	redline_north.push(new google.maps.LatLng(42.373362,-71.118956));		// harvard square
+	codes.push(["RHARN", "RHARS"]);
 	redline_north.push(new google.maps.LatLng(42.365486,-71.103802));   	// central square
+	codes.push(["RCENN", "RCENS"]);
 	redline_north.push(new google.maps.LatLng(42.36249079,-71.08617653));	// kendall/mit
+	codes.push(["RKENN", "RKENS"]);
 	redline_north.push(new google.maps.LatLng(42.361166,-71.070628));     	// charles/mgh
+	codes.push(["RMGHN", "RMGHS"]);
 	redline_north.push(new google.maps.LatLng(42.35639457,-71.0624242));	// park street
+	codes.push(["RPRKN", "RPRKS"]);
 	redline_north.push(new google.maps.LatLng(42.355518,-71.060225));     	// downtown crossing
+	codes.push(["RDTCN", "RDTCS"]);
 	redline_north.push(new google.maps.LatLng(42.352271,-71.055242));     	// south station
+	codes.push(["RSOUN", "RSOUS"]);
 	redline_north.push(new google.maps.LatLng(42.342622,-71.056967));		// broadway
+	codes.push(["RBRON", "RBROS"]);
 	redline_north.push(new google.maps.LatLng(42.330154,-71.057655));     	// andrew
+	codes.push(["RANDN", "RANDS"]);
 	intersect = new google.maps.LatLng(42.320685,-71.052391);				// jfk/umass
 	redline_north.push(intersect);     	
 	redline_braintree.push(intersect);
 	redline_ashmont.push(intersect);								
+	codes.push(["RJFKN", "RJFKS"]);
 	redline_ashmont.push(new google.maps.LatLng(42.31129,-71.053331));		// savin hill
+	codes.push(["RSAVN", "RSAVS"]);
 	redline_ashmont.push(new google.maps.LatLng(42.300093,-71.061667));     // fields corner
+	codes.push(["RFIEN", "RFIES"]);
 	redline_ashmont.push(new google.maps.LatLng(42.29312583,-71.06573796)); // shawmut
+	codes.push(["RSHAN", "RSHAS"]);
 	redline_ashmont.push(new google.maps.LatLng(42.284652,-71.064489));		// ashmont
+	codes.push([null, "RASHS"]);
 	redline_braintree.push(new google.maps.LatLng(42.275275,-71.029583));	// north quincy
+	codes.push(["RNQUN", "RNQUS"]);
 	redline_braintree.push(new google.maps.LatLng(42.2665139,-71.0203369)); // wollaston
+	codes.push(["RWOLN", "RWOLS"]);
 	redline_braintree.push(new google.maps.LatLng(42.251809,-71.005409));	// quincy center
+	codes.push(["RQUCN", "RQUCS"]);
 	redline_braintree.push(new google.maps.LatLng(42.233391,-71.007153));	// quincy adams
+	codes.push(["RQUAN", "RQUAS"]);
 	redline_braintree.push(new google.maps.LatLng(42.2078543,-71.0011385)); // braintree
+	codes.push([null, "RBRAS"]);
 	for(var i in redline_north) {
 		markers.push(new google.maps.Marker({title: north_names[i], position: redline_north[i], icon: t_icon, map: map}));
 	}
-	for(var i in redline_ashmont) {
+	for(i = 1; i < redline_ashmont.length; i++) {
 		markers.push(new google.maps.Marker({title: ashmont_names[i], position: redline_ashmont[i],  icon: t_icon, map: map}));
 	}
-	for(var i in redline_braintree) {
+	for(i = 1; i < redline_braintree.length; i++) {
 		markers.push(new google.maps.Marker({title: braintree_names[i], position: redline_braintree[i], icon: t_icon, map: map}));
 	}
+	for(var i in markers) {
+		google.maps.event.addListener(markers[i], 'click', getSchedule(markers[i]));
+	}
+}
+
+function getSchedule(marker) {
+	alert(marker.title);
 }
 		
 function findMyLocation() {
