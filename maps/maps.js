@@ -102,7 +102,7 @@ function makeRedLine() {
 }
 
 function getSchedule(marker) {
-	alert(marker.title);
+	printMessage(document.createTextNode(marker.title));
 }
 		
 function findMyLocation() {
@@ -127,6 +127,8 @@ function findMyLocation() {
 					strokeOpacity: 0.5,
 					strokeWeight: 8
 				});
+				map.setZoom(8);
+				map.setCenter(mypos);
 
 			}, 
 			function() {
