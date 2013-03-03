@@ -127,7 +127,7 @@ function findMyLocation() {
 					strokeOpacity: 0.5,
 					strokeWeight: 8
 				});
-				map.setZoom(12);
+				map.setZoom(13);
 				map.setCenter(mypos);
 
 			}, 
