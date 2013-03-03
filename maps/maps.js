@@ -108,16 +108,23 @@ function addClickListeners() {
 						name = this.title;
 						northcode = codes[name][0];
 						southcode = codes[name][1];
-						northbound = [];
-						southbound = [];
+						content = "<h3>" + name + "</h3> <table><tr><th>Direction</th><th>Time Until Arrival</th></tr>";
 						for(var j in json_response) {
 							key = json_response[j].PlatformKey;
-							if(key == northcode) {
-								northbound.push(json_response[j]);
-							} else if(key == southcode) {
-								southbound.push(json_response[j]);
+							if(this.InformationType == "Predicted") {
+								if(key == northcode) {
+									content += "<tr><td>Northbound</td><td>" + this.TimeRemaining + '</td></tr>';
+								} else if(key == southcode) {
+									content += "<tr><td>Southbound</td><td>" + this.TimeRemaining + '</td></tr>';
+								}
 							}
-						}
+						}				
+						content += "</table>";
+						infowindow = new google.maps.InfoWindow({
+							map: map,
+							position: this.position, 
+							content: content
+						});
 					} 
 					else {
 						printMessage("Error: " + request.status + " when retreiving JSON listing.");
