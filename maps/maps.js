@@ -1,6 +1,5 @@
 var map;
 var mypos;
-var json_response;
 var lat = 42.30321;
 var lng = -71.09047;
 
@@ -14,9 +13,7 @@ var redline_ashmont = [];
 var ashmont_names = ["JFK/UMass Station", "Savin Hill Station", "Fields Corner Station", "Shawmut Station", "Ashmont Station"];
 
 
-var codes = [];
-
-
+var codes = []; 
 var t_icon = "assets/tsymbol.png";
 var carmen = "assets/carmen.png";
 var waldo = "assets/waldo.png";
@@ -34,59 +31,58 @@ function initialize() {
 	map = new google.maps.Map(document.getElementById("canvas"), mapOptions);
 	makeRedLine();
 	mapRedLine();
-	getJSONlisting();
-	
 	findMyLocation();
+	findWaldoandCarmen();
 }
 
 function makeRedLine() {
 	redline_north.push(new google.maps.LatLng(42.395428,-71.142483));   	// alewife
-	codes.push(["RALEN", null]);
+	codes["Alewife Station"] = ["RALEN", null];
 	redline_north.push(new google.maps.LatLng(42.39674,-71.121815));    	// davis
-	codes.push(["RDAVN", "RDAVS"]);
+	codes["Davis Station"] = ["RDAVN", "RDAVS"];
 	redline_north.push(new google.maps.LatLng(42.3884,-71.119149));			// porter square
-	codes.push(["RPORN", "RPORS"]);
+	codes["Porter Square Station"] = ["RPORN", "RPORS"];
 	redline_north.push(new google.maps.LatLng(42.373362,-71.118956));		// harvard square
-	codes.push(["RHARN", "RHARS"]);
+	codes["Harvard Square Station"] = ["RHARN", "RHARS"];
 	redline_north.push(new google.maps.LatLng(42.365486,-71.103802));   	// central square
-	codes.push(["RCENN", "RCENS"]);
+	codes["Central Square Station"] = ["RCENN", "RCENS"];
 	redline_north.push(new google.maps.LatLng(42.36249079,-71.08617653));	// kendall/mit
-	codes.push(["RKENN", "RKENS"]);
+	codes["Kendall/MIT Station"] = ["RKENN", "RKENS"];
 	redline_north.push(new google.maps.LatLng(42.361166,-71.070628));     	// charles/mgh
-	codes.push(["RMGHN", "RMGHS"]);
+	codes["Charles/MGH Station"] = ["RMGHN", "RMGHS"];
 	redline_north.push(new google.maps.LatLng(42.35639457,-71.0624242));	// park street
-	codes.push(["RPRKN", "RPRKS"]);
+	codes["Park St. Station"] = ["RPRKN", "RPRKS"];
 	redline_north.push(new google.maps.LatLng(42.355518,-71.060225));     	// downtown crossing
-	codes.push(["RDTCN", "RDTCS"]);
+	codes["Downtown Crossing Station"] = ["RDTCN", "RDTCS"];
 	redline_north.push(new google.maps.LatLng(42.352271,-71.055242));     	// south station
-	codes.push(["RSOUN", "RSOUS"]);
+	codes["South Station"] = ["RSOUN", "RSOUS"];
 	redline_north.push(new google.maps.LatLng(42.342622,-71.056967));		// broadway
-	codes.push(["RBRON", "RBROS"]);
+	codes["Broadway Station"] = ["RBRON", "RBROS"];
 	redline_north.push(new google.maps.LatLng(42.330154,-71.057655));     	// andrew
-	codes.push(["RANDN", "RANDS"]);
+	codes["Andrew Station"] = ["RANDN", "RANDS"];
 	intersect = new google.maps.LatLng(42.320685,-71.052391);				// jfk/umass
 	redline_north.push(intersect);     	
 	redline_braintree.push(intersect);
 	redline_ashmont.push(intersect);								
-	codes.push(["RJFKN", "RJFKS"]);
+	codes["JFK/UMass Station"] = ["RJFKN", "RJFKS"];
 	redline_ashmont.push(new google.maps.LatLng(42.31129,-71.053331));		// savin hill
-	codes.push(["RSAVN", "RSAVS"]);
+	codes["Savin Hill Station"] = ["RSAVN", "RSAVS"];
 	redline_ashmont.push(new google.maps.LatLng(42.300093,-71.061667));     // fields corner
-	codes.push(["RFIEN", "RFIES"]);
+	codes["Fields Corner Station"] = ["RFIEN", "RFIES"];
 	redline_ashmont.push(new google.maps.LatLng(42.29312583,-71.06573796)); // shawmut
-	codes.push(["RSHAN", "RSHAS"]);
+	codes["Shawmut Station"] = ["RSHAN", "RSHAS"];
 	redline_ashmont.push(new google.maps.LatLng(42.284652,-71.064489));		// ashmont
-	codes.push([null, "RASHS"]);
+	codes["Ashmont Station"] = [null, "RASHS"];
 	redline_braintree.push(new google.maps.LatLng(42.275275,-71.029583));	// north quincy
-	codes.push(["RNQUN", "RNQUS"]);
+	codes["North Quincy Station"] = ["RNQUN", "RNQUS"];
 	redline_braintree.push(new google.maps.LatLng(42.2665139,-71.0203369)); // wollaston
-	codes.push(["RWOLN", "RWOLS"]);
+	codes["Wollaston Station"] = ["RWOLN", "RWOLS"];
 	redline_braintree.push(new google.maps.LatLng(42.251809,-71.005409));	// quincy center
-	codes.push(["RQUCN", "RQUCS"]);
+	codes["Quincy Center Station"] = ["RQUCN", "RQUCS"];
 	redline_braintree.push(new google.maps.LatLng(42.233391,-71.007153));	// quincy adams
-	codes.push(["RQUAN", "RQUAS"]);
+	codes["Quincy Adams Station"] = ["RQUAN", "RQUAS"];
 	redline_braintree.push(new google.maps.LatLng(42.2078543,-71.0011385)); // braintree
-	codes.push([null, "RBRAS"]);
+	codes["Braintree Station"] = [null, "RBRAS"];
 	for(var i in redline_north) {
 		markers.push(new google.maps.Marker({title: north_names[i], position: redline_north[i], icon: t_icon, map: map}));
 	}
@@ -96,13 +92,77 @@ function makeRedLine() {
 	for(i = 1; i < redline_braintree.length; i++) {
 		markers.push(new google.maps.Marker({title: braintree_names[i], position: redline_braintree[i], icon: t_icon, map: map}));
 	}
+	addClickListeners();
+}
+
+function addClickListeners() {
 	for(var i in markers) {
-		google.maps.event.addListener(markers[i], 'click', getSchedule(markers[i]));
+		google.maps.event.addListener(markers[i], 'click', function(){
+			request = new XMLHttpRequest();
+			request.open("GET", "http://mbtamap-cedar.herokuapp.com/mapper/redline.json");
+			request.send(null);
+			request.onreadystatechange = function() {
+				if(request.readyState == request.DONE) {
+					if(request.status == 200){
+						json_response = JSON.parse(request.responseText);
+						name = this.title;
+						northcode = codes[name][0];
+						southcode = codes[name][1];
+						northbound = [];
+						southbound = [];
+						for(var j in json_response) {
+							key = json_response[j].PlatformKey;
+							if(key == northcode) {
+								northbound.push(json_response[j]);
+							} else if(key == southcode) {
+								southbound.push(json_response[j]);
+							}
+						}
+					} 
+					else {
+						printMessage("Error: " + request.status + " when retreiving JSON listing.");
+					}
+				} 
+			}
+		});
 	}
 }
 
-function getSchedule(marker) {
-	printMessage(document.createTextNode(marker.title));
+function findWaldoandCarmen() {
+	request = new XMLHttpRequest();
+	try {
+		request.open("GET", "http://messagehub.herokuapp.com/a3.json ");
+		request.send(null);
+		request.onreadystatechange = function() {
+			if(request.readyState == request.DONE) {
+				if(request.status == 200){
+					json_response = JSON.parse(request.responseText);
+					for(var i in json_response) {
+						var name = json_response[i].name;
+						if(name == "Waldo") {
+							var icon = waldo;
+						}
+						else if(name == "Carmen Sandiego") {
+							var icon = carmen;
+						}
+						var lat = json_response[i].loc.latitude;
+						var lng = json_response[i].loc.longitude;
+						var msg = json_response[i].loc.note;
+						var pos = new google.maps.LatLng(lat, lng);
+						new google.maps.Marker({title: name, position: pos, icon: icon, map: map});
+						var dist = calculateDistance(pos);
+						printMessage(name + " is " + dist + " miles away. Note: " + msg);
+					}
+				} 
+				else {
+					printMessage("Error: " + request.status + " when retreiving JSON listing.");
+				}
+			} 
+		}
+	}
+	catch(error) {
+		printMessage("Error: bad Waldo/Carmen listing.");
+	}
 }
 		
 function findMyLocation() {
@@ -114,7 +174,7 @@ function findMyLocation() {
 				infowindow = new google.maps.InfoWindow({
 					map: map,
 					position: mypos, 
-					content: "<h3> Found you! </h3> Closest station is <strong>" + station.title + "</strong> at a distance of " + (station.distance * 0.621371).toFixed(2) + " miles."
+					content: "<h3> I found you! </h3> Closest station is <strong>" + station.title + "</strong> at a distance of " + station.distance.toFixed(2) + " miles."
 				});
 				positionmarker = new google.maps.Marker({
 					map: map,
@@ -127,42 +187,19 @@ function findMyLocation() {
 					strokeOpacity: 0.5,
 					strokeWeight: 8
 				});
-				map.setZoom(13);
 				map.setCenter(mypos);
 
 			}, 
 			function() {
-				printMessage(document.createTextNode("Error: cannot get geolocation. You may have it turned off."));
+				printMessage("Error: cannot get geolocation. You may have it turned off.");
 			}
 		);
 	}
 	else {  // Browser doesn't support Geolocation
-		printMessage(document.createTextNode("Error: your browser has no support for geolocation."));
+		printMessage("Error: your browser has no support for geolocation.");
 	}
 }
 
-function getJSONlisting() {
-	try {
-		request = new XMLHttpRequest();
-		request.open("GET", "http://mbtamap-cedar.herokuapp.com/mapper/redline.json");
-		request.send(null);
-		request.onreadystatechange = checkStatus;
-	}
-	catch(error) {
-		printMessage(document.createTextNode("Error: " + error.message));
-	}
-}
-
-function checkStatus() {
-	if(request.readyState == request.DONE) {
-		if(request.status == 200){
-			json_response = JSON.parse(request.responseText);
-		} 
-		else {
-			printMessage(document.createTextNode("Error: " + request.status + " when retreiving JSON listing."));
-		}
-	} 
-}
 
 function mapRedLine() {
 	redline_north_pline = new google.maps.Polyline({
@@ -190,20 +227,36 @@ function mapRedLine() {
 }
 
 function printMessage(message) {
-	errorbar = document.getElementById("error");
+	errorbar = document.getElementById("messages");
 	errorbar.appendChild(document.createElement("br"));
-	errorbar.appendChild(message);
+	errorbar.appendChild(document.createTextNode(message));
+}
+
+function calculateDistance(point) {
+	var R = 3963.1676; // miles
+	var lat = mypos.lat();
+    var lng = mypos.lng();
+    var blat = point.lat();
+    var blng = point.lng();
+    var dLat  = rad(blat - lat);
+    var dLong = rad(blng - lng);
+    var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+        Math.cos(rad(lat)) * Math.cos(rad(lat)) * Math.sin(dLong/2) * Math.sin(dLong/2);
+    var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+    var d = R * c;
+    return d;
 }
 
 function rad(x) {return x*Math.PI/180;}
-/* haversine formula for distance: credit to stackoverflow */
+/* haversine formula for distance: modified from an example on stackoverflow */
 function findClosestMarker() {
 	var lat = mypos.lat();
     var lng = mypos.lng();
-    var R = 6371; // radius of earth in km
+    var R = 3963.1676; // radius of earth in miles
     var distances = [];
     var closest = -1;
     for(var i in markers) {
+    /*
         var mlat = markers[i].position.lat();
         var mlng = markers[i].position.lng();
         var dLat  = rad(mlat - lat);
@@ -213,6 +266,8 @@ function findClosestMarker() {
         var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
         var d = R * c;
         distances[i] = d;
+        */
+        distances[i] = calculateDistance(markers[i].position)
         if ( closest == -1 || d < distances[closest] ) {
             closest = i;
         }
