@@ -150,7 +150,7 @@ function findWaldoandCarmen() {
 						var msg = json_response[i].loc.note;
 						var pos = new google.maps.LatLng(lat, lng);
 						new google.maps.Marker({title: name, position: pos, icon: icon, map: map});
-						var dist = calculateDistance(pos);
+						var dist = calculateDistance(mypos, pos);
 						printMessage(name + " is " + dist + " miles away. Note: " + msg);
 					}
 				} 
@@ -174,7 +174,7 @@ function findMyLocation() {
 				infowindow = new google.maps.InfoWindow({
 					map: map,
 					position: mypos, 
-					content: "<h3> I found you! </h3> Closest station is <strong>" + station.title + "</strong> at a distance of " + station.distance.toFixed(2) + " miles."
+					content: "<h3> Found you! </h3> Closest station is <strong>" + station.title + "</strong> at a distance of " + station.distance.toFixed(2) + " miles."
 				});
 				positionmarker = new google.maps.Marker({
 					map: map,
@@ -232,14 +232,14 @@ function printMessage(message) {
 	errorbar.appendChild(document.createTextNode(message));
 }
 
-function calculateDistance(point_b) {
+function calculateDistance(mypos, pos) {
 	var R = 3963.1676; // miles
 	var lat = mypos.lat();
     var lng = mypos.lng();
-    var blat = point_b.lat();
-    var blng = point_b.lng();
-    var dLat  = rad(blat - lat);
-    var dLong = rad(blng - lng);
+    var pLat = pos.lat();
+    var pLng = pos.lng();
+    var dLat  = rad(pLat - lat);
+    var dLong = rad(pLng - lng);
     var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
         Math.cos(rad(lat)) * Math.cos(rad(lat)) * Math.sin(dLong/2) * Math.sin(dLong/2);
     var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
