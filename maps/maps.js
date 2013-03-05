@@ -283,7 +283,7 @@ function findClosestMarker() {
         var d = R * c;
         */
         distances[i] = calculateDistance(mypos, markers[i].position);
-        if ( closest == -1 || d < distances[closest] ) {
+        if ( closest == -1 || distances[i] < distances[closest] ) {
             closest = i;
         }
     }
