@@ -25,3 +25,13 @@ body {
 #canvas {
 	height:500px;
 }
+
+th{
+	background: black;
+	color: white;
+	border-color: white;
+	border-width: 1px;
+	border-style: solid;
+	border-collapse: collapse;
+	width: 100px;
+}
