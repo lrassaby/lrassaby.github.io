@@ -168,7 +168,7 @@ function findWaldoandCarmen(mypos) {
 					}
 				} 
 				else {
-					printMessage("Error: " + request.status + " when retreiving JSON listing. Can't find Waldo or Carmen");
+					printMessage("Error: " + request.status + " when retreiving JSON listing. Can't find Waldo or Carmen.");
 				}
 			} 
 		}
@@ -272,6 +272,7 @@ function findClosestMarker() {
     var distances = [];
     var closest = -1;
     for(var i in markers) {
+    	/*
         var mlat = markers[i].position.lat();
         var mlng = markers[i].position.lng();
         var dLat  = rad(mlat - lat);
@@ -280,7 +281,8 @@ function findClosestMarker() {
             Math.cos(rad(lat)) * Math.cos(rad(lat)) * Math.sin(dLong/2) * Math.sin(dLong/2);
         var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
         var d = R * c;
-        distances[i] = d;
+        */
+        distances[i] = calculateDistance(mypos, markers[i].position;
         if ( closest == -1 || d < distances[closest] ) {
             closest = i;
         }
