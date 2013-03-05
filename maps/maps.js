@@ -168,7 +168,7 @@ function findWaldoandCarmen(mypos) {
 					}
 				} 
 				else {
-					printMessage("Error: (" + request.status + ") when retreiving JSON listing.");
+					printMessage("Error: " + request.status + " when retreiving JSON listing. Can't find Waldo or Carmen");
 				}
 			} 
 		}
