@@ -27,12 +27,17 @@
 .socialbar li a i {
     background: #555;
     color: #fff;
-    width: 50px;
-    height: 50px;
-    border-radius: 25px;
+    width: 56px;
+    height: 56px;
+    border-radius: 30px;
     text-align: center;
     margin-right: 8px;
     padding-top: 15%;
+    transition: all 0.2s ease-in-out;
+}
+
+.socialbar li a i:hover {
+    opacity: .7;
 }
 
 .fa-facebook {
@@ -47,14 +52,9 @@
 
  
 
-.socialbar li a i {
-    transition: all 0.2s ease-in-out;
+#me_photo {
+    border: 5px solid #555;
 }
-.socialbar li a i:hover {
-    opacity: .7;
-}
-
-
 
 
 /* ==========================================================================
@@ -82,13 +82,13 @@ body {
 
 ::-moz-selection {
     background: #f2c2c9;
-    color: #a4003a;
+    color: #E8CAA4;
     text-shadow: none;
 }
 
 ::selection {
     background: #16a085;
-    color: #a4003a;
+    color: #E8CAA4;
     text-shadow: none;
 }
 
@@ -319,7 +319,7 @@ a:after {
    ========================================================================== */
 
 #headerwrap {
-	background: url(../img/header_bg.jpg) no-repeat center top, #542437;
+	background: url(../img/header_bg.jpg) no-repeat center top, #6A0000;
 	margin-top: -50px;
 	padding-top:120px;
 	text-align:center;
@@ -346,7 +346,7 @@ a:after {
 	letter-spacing: 8px;
 	font-size: 60px;
 	font-weight: bold;
-	text-shadow: 2px 2px 2px #000;
+	text-shadow: 2px 2px 2px #222;
 }
 
 #headerwrap p {
@@ -590,10 +590,10 @@ a:after {
 
 .no-touch .mask figure:hover img,
 .mask figure.cs-hover img {
-	-webkit-transform: translateY(-30px);
-	-moz-transform: translateY(-30px);
-	-ms-transform: translateY(-30px);
-	transform: translateY(-30px);
+	-webkit-transform: translateY(-20px);
+	-moz-transform: translateY(-20px);
+	-ms-transform: translateY(-20px);
+	transform: translateY(-20px);
 }
 
 .mask figcaption {
