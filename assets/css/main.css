@@ -1,5 +1,5 @@
 /*
- * Author: Carlos Alvarez
+ * Author: Carlos Alvarez 
  * URL: http://Alvarez.is
  *
  * Project Name: SHIELD - Free Bootstrap 3 Theme
@@ -7,14 +7,13 @@
  * Date: 02-11-2013
  * URL: http://blacktie.co/
  *
- * Modified by Louis Rassaby
+ ****> Modified by Louis Rassaby for his personal website
  */
 
 /* new modifications */
 
 
-
-.socialbar {
+.socialbar, .companybar {
     overflow: auto;
     margin-right: 30px;
     margin-top: 8px;
@@ -40,6 +39,24 @@
     opacity: .7;
 }
 
+.companybar img {
+    height: 100px;
+}
+
+.companybar li {
+    display: inline-block;
+}
+
+.companybar .company-tufts {
+    height: 110px;
+}
+.companybar .company-avast {
+    height: 100px;
+}
+.companybar .company-ge {
+    height: 106px;
+}
+
 .fa-facebook {
     background:#3b5998 !important;
 } 
@@ -50,7 +67,24 @@
     background:#555 !important;
 }
 
- 
+img.semi-grayscale {
+    transition: filter 0.3s ease;
+    transition: -webkit-filter 0.3s ease;
+    filter: url("data:image/svg+xml;utf8,<svg%20xmlns='http://www.w3.org/2000/svg'><filter%20id='grayscale'><feColorMatrix%20type='matrix'%20values='0.3333%200.3333%200.3333%200%200%200.3333%200.3333%200.3333%200%200%200.3333%200.3333%200.3333%200%200%200%200%200%201%200'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
+    filter: grayscale(100%); /* Current draft standard */
+    -webkit-filter: grayscale(100%); /* New WebKit */
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%); 
+    -o-filter: grayscale(100%);
+    filter: gray; /* IE6+ */
+}
+
+img.semi-grayscale:hover {
+  filter: none;
+  -webkit-filter: grayscale(0%);
+}
+
+
 
 #me_photo {
     border: 5px solid #555;
@@ -207,7 +241,7 @@ a img {
 
 /* Titles */
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Raleway";
+    font-family: "Lato", "Helvetica", sans-serif;
     font-weight: 300;
     color: #333;
 }
@@ -239,7 +273,7 @@ em {
 pre {
     background: #ebebeb;
     border: none;
-    font-family: "Monaco";
+    font-family: "Monaco", "Lato", "Helvetica", sans-serif;
     font-size: 16px;
     color: #666;
     padding: 20px;
@@ -319,9 +353,9 @@ a:after {
    ========================================================================== */
 
 #headerwrap {
-	background: url(../img/header_bg.jpg) no-repeat center top, #6A0000;
+	background: #6A0000;
 	margin-top: -50px;
-	padding-top:120px;
+	padding-top:80px;
 	text-align:center;
 	background-attachment: relative;
 	background-position: center center;
@@ -515,7 +549,7 @@ a:after {
 }
 
 .service-active p {
-	font-family: 'Lato', sans-serif;
+	font-family: "Lato", "Helvetica", sans-serif;
 	padding-top: 10px;
 }
 
@@ -675,11 +709,14 @@ a:after {
 
 @media screen and (max-width:769px) {
 	#headerwrap h1 {
-		font-size: 80px;
+		font-size: 50px;
 	}
 	#headerwrap p {
 		font-size: 30px;
 		line-height: 38px;
 	}
+    #headerwrap {
+        padding-top: 50px;
+    }
 }
 
