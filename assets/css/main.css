@@ -381,7 +381,7 @@ a:after {
 	letter-spacing: 8px;
 	font-size: 60px;
 	font-weight: bold;
-	text-shadow: 2px 2px 2px #222;
+	/*text-shadow: 2px 2px 2px #222;*/
 }
 
 #headerwrap p {
