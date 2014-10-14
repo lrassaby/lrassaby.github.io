@@ -91,6 +91,8 @@ img.semi-grayscale:hover {
 }
 
 
+
+
 /* ==========================================================================
    Base Styles and Bootstrap Modifications
    ========================================================================== */
@@ -354,24 +356,14 @@ a:after {
    ========================================================================== */
 
 #headerwrap {
-	background: #6A0000;
-	margin-top: -50px;
-	padding-top:80px;
+    background:
+        radial-gradient(black 15%, transparent 16%) 0 0,
+        radial-gradient(black 15%, transparent 16%) 8px 8px,
+        radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+        radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+    background-color:#6A0000;
+    background-size:16px 16px;
 	text-align:center;
-	background-attachment: relative;
-	background-position: center center;
-	min-height: 300px;
-	width: 100%;
-	
-    -webkit-background-size: 100%;
-    -moz-background-size: 100%;
-    -o-background-size: 100%;
-    background-size: 100%;
-
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
 }
 
 #headerwrap h1 {
