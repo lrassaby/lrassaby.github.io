@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Personal Website of Louis Rassaby">
-    <meta name="author" content="Louis Rassaby and blacktie.co">
+    <meta name="author" content="Louis Rassaby">
+    <!-- TODO: add a favicon -->
     <link rel="shortcut icon" href="assets/ico/favicon.png">
 
     <title> Louis Rassaby </title>
@@ -14,235 +15,118 @@
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="assets/css/animate-custom.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
-    
+
     <script src="assets/js/jquery.min.js"></script>
-	<script type="text/javascript" src="assets/js/modernizr.custom.js"></script>
-    
-  </head>
+    <script type="text/javascript" src="assets/js/modernizr.custom.js"></script>
+</head>
 
-  <body data-spy="scroll" data-offset="0" data-target="#navbar-main">
-  
-  
-  	<div id="navbar-main">
+<body data-spy="scroll" data-offset="0" data-target="#navbar-main">
+
+
+<div id="navbar-main">
     <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <i class="fa fa-bars" style="font-size:30px; color:#fff;"></i>
-          </button>
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <i class="fa fa-bars" style="font-size:30px; color:#fff;"></i>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="#home" class="smoothScroll">Home</a></li>
+                    <li><a href="#about" class="smoothScroll"> Bio &amp; contact </a></li>
+                    <li><a href="#portfolio" class="smoothScroll"> Code &amp; projects </a></li>
+                </ul>
+            </div>
         </div>
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li> <a href="#home" class="smoothScroll">Home</a></li>
-			<li> <a href="#about" class="smoothScroll"> Bio &amp; contact </a></li>
-			<li> <a href="#portfolio" class="smoothScroll"> Code &amp; projects </a></li>
-		</ul>
+    </div>
+</div>
+
+<div id="home"></div>
+<div id="headerwrap">
+    <header class="clearfix">
+        <h1> louis rassaby </h1>
+    </header>
+</div>
+
+<div class="container" id="about">
+    <div class="row white">
+        <br>
+        <h1 class="centered"> a bit about me </h1>
+        <hr>
+        <div class="centered">
+            <img id="me_photo" class="img img-circle" src="assets/img/me/main_photo.jpg" height="200" width="200"
+                 alt="">
+
+            <ul class="socialbar">
+                <li><a href="http://github.com/lrassaby" target="_blank" title="GitHub"><i
+                        class="fa fa-github fa-2x"></i></a></li>
+                <li><a href="http://linkedin.com/in/lrassaby" target="_blank" title="LinkedIn"><i
+                        class="fa fa-linkedin fa-2x"></i></a></li>
+                <li><a href="http://facebook.com/lrassaby" target="_blank" title="Facebook"><i
+                        class="fa fa-facebook fa-2x"></i></a></li>
+                <li>
+                    <a href="http://www.google.com/recaptcha/mailhide/d?k=01YmFUWNkuMPavZceDFMbXYQ==&amp;c=RXpKo5S3cxccsRIoW1X4n9n9dQpw9z79NHEcBcAJfB8="
+                       onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\07501YmFUWNkuMPavZceDFMbXYQ\75\75\46c\75RXpKo5S3cxccsRIoW1X4n9n9dQpw9z79NHEcBcAJfB8\075', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;"
+                       title="Email"><i class="fa fa-envelope fa-2x"></i></a></li>
+            </ul>
         </div>
-      </div>
+        <div class="centered col-lg-6 col-lg-offset-3">
+            Download my <a href="assets/resume.pdf"> resume </a> here.
+        </div>
+        <div class="col-lg-8 col-lg-offset-2">
+            <p>
+                I'm an Aussie-American software engineer and cellist living in East Village.
+            </p>
+            <p>
+                Coding for me is all about the creative process, and I like
+                making things that align with my other interests, like a musical programming language or a 3D art
+                installation. Beyond anything else, I love using computers to solve big problems.
+            </p>
+            <p>
+                <span>I'm currently working as a software engineer at</span>
+                <a href="http://www.recombine.com" target="_blank">Recombine</a>, a genetics startup in the Flatiron
+                area.
+                <span> To learn more about me, check out my </span>
+                <a href="assets/resume.pdf"> resume</a>
+                <span> or connect with me on </span>
+                <a href="https://www.linkedin.com/in/lrassaby" target="_blank">LinkedIn</a>.
+            </p>
+
+        </div>
+        <div class="col-lg-8 col-lg-offset-2">
+            <p>
+                I'm using my 20s to explore and find the experiences, people, ideas, and places that challenge me,
+                engage me, and make me happy.
+            </p>
+            <p>
+                <span>
+                    Away from the computer, I love to create things. Music is my biggest passion and I play a weekly gig with my
+                friends at
+                </span>
+                <a href="caffevivaldi.com">Caffe Vivaldi </a>
+                <span>in the West Village.</span>
+            </p>
+            <p>
+                <span> Over the past few
+                years, I've gotten pretty into photography (the border photo below, for instance), and I'm going to
+                update this website with some more photos and a blog soon! I'm also into cooking, especially </span>
+                <a href="http://www.ottolenghi.co.uk/" target="_blank"> Mediterranean-style </a>
+                <span> food. </span>
+            </p>
+        </div>
     </div>
+</div>
+
+<section class="section-divider textdivider divider1"></section>
+
+<div id="footerwrap">
+    <div class="container">
+        <h4> Built by Louis Rassaby - &copy; 2016</h4>
     </div>
-
-		<!-- ==== HEADERWRAP ==== -->
-	    <div id="home"></div>
-	    <div id="headerwrap">
-			<header class="clearfix">
-	  		 		<h1> louis rassaby </h1>
-	  		</header>	    
-	    </div><!-- /headerwrap -->
-	
-  
-		<!-- ==== ABOUT ==== -->
-		<div class="container" id="about"> 
-			<div class="row white">
-			<br>
-				<h1 class="centered"> a bit about me </h1>
-				<hr>
-				<div class="centered">
-					<img id="me_photo" class="img img-circle" src="assets/img/me/main_photo.jpg" height="200" width="200" alt="">
-
-					<ul class="socialbar">
-						<li><a href="http://github.com/lrassaby" target="_blank" title="GitHub"><i class="fa fa-github fa-2x"></i></a></li>
-						<li><a href="http://linkedin.com/in/lrassaby" target="_blank" title="LinkedIn"><i class="fa fa-linkedin fa-2x"></i></a></li>
-						<li><a href="http://facebook.com/lrassaby" target="_blank" title="Facebook"><i class="fa fa-facebook fa-2x"></i></a></li>
-						<li><a href="http://www.google.com/recaptcha/mailhide/d?k=01YmFUWNkuMPavZceDFMbXYQ==&amp;c=RXpKo5S3cxccsRIoW1X4n9n9dQpw9z79NHEcBcAJfB8=" onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\07501YmFUWNkuMPavZceDFMbXYQ\75\75\46c\75RXpKo5S3cxccsRIoW1X4n9n9dQpw9z79NHEcBcAJfB8\075', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" title="Email"><i class="fa fa-envelope fa-2x"></i></a></li>
-					</ul>
-				</div>
-                <div class="centered col-lg-6 col-lg-offset-3">
-                Download my <a href="assets/resume.pdf"> resume </a> here.
-                </div>
-				<div class="col-lg-8 col-lg-offset-2">
-					<p> I'm a software engineer based in NYC with international and Fortune
-                    50 work experience. My interests lie in problems on the cutting edge
-                    of computer science, particularly in data science and data 
-                    visualizations, programming languages, and working on software that solves challenging and meaningful problems.
-
-                    I'm currently working as a software engineer at 
-                    <a href="http://www.recombine.com" target="_blank">Recombine</a>. 
-
-                    To learn more about me, check out my <a href="assets/resume.pdf"> resume</a> or connect with me on <a href="https://www.linkedin.com/in/lrassaby" target="_blank">LinkedIn</a>. </p>
-				</div><!-- col-lg-8 -->	
-				<div class="col-lg-8 col-lg-offset-2">
-					<p> Away from the computer, you'll often find me in the practice rooms with my cello. Over the past few years, I've gotten pretty into photography (the border photo below, for instance), and I'm going to update this website with some more photos and a blog soon! I'm also into cooking, especially <a href="http://www.ottolenghi.co.uk/" target="_blank">Meditteranean-style </a> food. </p>
-				</div><!-- col-lg-8 -->
-			</div><!-- row -->
-		</div><!-- container -->
-		
-		<!-- ==== SECTION DIVIDER1 -->
-		<section class="section-divider textdivider divider1"></section><!-- section -->
-		
-
-		
-
-		<!-- ==== PORTFOLIO ==== -->
-		<div class="container" id="portfolio">
-		<br>
-			<div class="row">
-				<br>
-				<h1 class="centered"> projects </h1>
-				<hr>
-				<br>
-				<br>
-			</div><!-- /row -->
-			<div class="col-lg-6 col-lg-offset-3">
-				<p> Unfortunately, a lot of my work is closed-source and can't
-                be shared for the moment. I'm currently working on a couple of
-                projects that will soon be open-sourced, including an ontology
-                crosswalk research project for <a href="https://www.cuahsi.org"
-                target="_blank"> CUAHSI</a>, a hydrological research center. I 
-                will update this section with more projects in the next few 
-                weeks. In the meantime, please have a look at my <a
-                href="assets/resume.pdf">resume</a>, or <a
-                href="http://www.google.com/recaptcha/mailhide/d?k=01YmFUWNkuMPavZceDFMbXYQ==&amp;c=RXpKo5S3cxccsRIoW1X4n9n9dQpw9z79NHEcBcAJfB8="
-                onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\07501YmFUWNkuMPavZceDFMbXYQ\75\75\46c\75RXpKo5S3cxccsRIoW1X4n9n9dQpw9z79NHEcBcAJfB8\075',
-                '',
-                'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300');
-                return false;" title="Email">
-                email me </a>  for more information about my projects and work experience. 
-                </p>
-				</div><!-- col-lg-8 -->
-			<div class="clearfix"></div>
-			<div class="container">
-			<div style="display:none">
-			<div class="row">	
-				<!-- PORTFOLIO IMAGE 1 -->
-				<div class="col-md-4">
-			    	<div class="grid mask">
-						<figure>
-							<img class="img-responsive" src="assets/img/portfolio/folio01.jpg" alt="">
-							<figcaption>
-								<h5 style="text-transform: uppercase">phantom echoes</h5>
-								<a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg">Take a Look</a>
-							</figcaption><!-- /figcaption -->
-						</figure><!-- /figure -->
-			    	</div><!-- /grid-mask -->
-				</div><!-- /col -->
-				
-				
-			  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-			    <div class="modal-dialog">
-			      <div class="modal-content">
-			        <div class="modal-header">
-			          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-			          <h4 class="modal-title">Project Title</h4>
-			        </div>
-			        <div class="modal-body">
-			          <p><img class="img-responsive" src="assets/img/portfolio/folio01.jpg" alt=""></p>
-			          <p>This project was crafted for Some Name corp. Detail here a little about your job requirements and the tools used. Tell about the challenges faced and what you and your team did to solve it.</p>
-			          <p><b><a href="#">Visit Site</a></b></p>
-			        </div>
-			        <div class="modal-footer">
-			          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-			        </div>
-			      </div><!-- /.modal-content -->
-			    </div><!-- /.modal-dialog -->
-			  </div><!-- /.modal -->
-	
-				
-				<!-- PORTFOLIO IMAGE 2 -->
-				<div class="col-md-4">
-			    	<div class="grid mask">
-						<figure>
-							<img class="img-responsive" src="assets/img/portfolio/folio02.jpg" alt="">
-							<figcaption>
-								<h5>UI DESIGN</h5>
-								<a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg">Take a Look</a>
-							</figcaption><!-- /figcaption -->
-						</figure><!-- /figure -->
-			    	</div><!-- /grid-mask -->
-				</div><!-- /col -->
-				
-				<!-- PORTFOLIO IMAGE 3 -->
-				<div class="col-md-4">
-			    	<div class="grid mask">
-						<figure>
-							<img class="img-responsive" src="assets/img/portfolio/folio03.jpg" alt="">
-							<figcaption>
-								<h5>ANDROID PAGE</h5>
-								<a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg">Take a Look</a>
-							</figcaption><!-- /figcaption -->
-						</figure><!-- /figure -->
-			    	</div><!-- /grid-mask -->
-				</div><!-- /col -->
-			</div><!-- /row -->
-
-				<!-- PORTFOLIO IMAGE 4 -->
-			<div class="row">	
-				<div class="col-md-4 ">
-			    	<div class="grid mask">
-						<figure>
-							<img class="img-responsive" src="assets/img/portfolio/folio04.jpg" alt="">
-							<figcaption>
-								<h5>PROFILE</h5>
-								<a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg">Take a Look</a>
-							</figcaption><!-- /figcaption -->
-						</figure><!-- /figure -->
-			    	</div><!-- /grid-mask -->
-				</div><!-- /col -->
-				
-				<!-- PORTFOLIO IMAGE 5 -->
-				<div class="col-md-4">
-			    	<div class="grid mask">
-						<figure>
-							<img class="img-responsive" src="assets/img/portfolio/folio05.jpg" alt="">
-							<figcaption>
-								<h5>TWITTER STATUS</h5>
-								<a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg">Take a Look</a>
-							</figcaption><!-- /figcaption -->
-						</figure><!-- /figure -->
-			    	</div><!-- /grid-mask -->
-				</div><!-- /col -->
-				
-				<!-- PORTFOLIO IMAGE 6 -->
-				<div class="col-md-4">
-			    	<div class="grid mask">
-						<figure>
-							<img class="img-responsive" src="assets/img/portfolio/folio06.jpg" alt="">
-							<figcaption>
-								<h5>PHONE MOCKUP</h5>
-								<a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg">Take a Look</a>
-							</figcaption><!-- /figcaption -->
-						</figure><!-- /figure -->
-			    	</div><!-- /grid-mask -->
-				</div><!-- /col -->
-			</div><!-- /row -->
-			<br>
-			<br>
-		</div>
-		</div><!-- /row -->
-	</div><!-- /container -->
-		<div id="footerwrap">
-			<div class="container">
-				<h4> Built by Louis Rassaby, loosely based on a design from <a href="http://blacktie.co">BlackTie.co</a> - &copy; 2014</h4>
-			</div>
-		</div>
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-		
-
-	<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="assets/js/jquery.easing.1.3.js"></script>
-    <script type="text/javascript" src="assets/js/smoothscroll.js"></script>
-  </body>
+</div>
+<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="assets/js/smoothscroll.js"></script>
+</body>
 </html>
