@@ -12,7 +12,6 @@ body {
     text-align: justify;
 }
 
-
 .img-profile {
     margin-top: 5em;
     margin-bottom: 4em;
@@ -63,7 +62,7 @@ body {
 }
 
 .row {
-    margin-right: 0px;
+    margin-right: 0;
     margin-left: -15px;
 }
 
@@ -72,7 +71,7 @@ body {
 }
 
 .navbar-toggle {
-    border: 0px solid transparent;
+    border: 0 solid transparent;
 }
 
 .navbar-default .navbar-nav > li > a:hover,
@@ -154,7 +153,6 @@ a:after {
     font-size: 60px;
 }
 
-
 .white h1 {
     padding-top: 35px;
 }
@@ -182,9 +180,7 @@ a:after {
     -o-background-size: cover;
     background-size: cover;
 
-    background-attachment: relative;
     background-position: center center;
-
     text-align: center;
 }
 
