@@ -10,6 +10,8 @@ body {
     font-size: 1em;
     line-height: 1.4;
     text-align: justify;
+    /*background: #f5f5f5;*/
+    background: white;
 }
 
 .img-profile {
@@ -53,7 +55,7 @@ body {
 }
 
 body {
-    font-family: "Lato", "Helvetica", sans-serif;
+    font-family: "Helvetica", sans-serif;
     font-weight: 300;
     font-size: 18px;
     color: #555;
@@ -100,7 +102,7 @@ a img {
     background: white;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1 {
     font-family: "Courier", serif;
     font-weight: 100;
     color: #333;
@@ -108,10 +110,6 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
     line-height: 28px;
-}
-
-.centered {
-    text-align: center;
 }
 
 a {
@@ -167,14 +165,15 @@ a:after {
     width: 100%;
     display: table;
     max-height: 450px;
-    border-bottom: 2px solid #E6EAED;
+
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
     box-sizing: border-box;
     padding-top: 30px;
     padding-bottom: 70px;
-    margin-top: 45px;
+    border-top: 1px solid #646464;
+    border-bottom: 1px solid #646464;
 
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -197,7 +196,7 @@ a:after {
 }
 
 .divider1 {
-    background-image: url('../img/bg/divider1.jpg')
+    background-image: url('../img/bg/prague1.jpg')
 }
 
 @media screen and (max-width: 1050px), screen and (max-device-width: 1050px) {
@@ -220,4 +219,27 @@ a:after {
     .header {
         padding-top: 50px;
     }
+}
+
+.row.resume-download {
+    padding-bottom: 3em;
+}
+
+.content-box {
+    background: white;
+    box-shadow: 0 0 1px 0 #c4c4c4;
+    padding: 5em;
+    margin-top: 2em;
+}
+
+.page-container {
+    height: 100%;
+}
+
+.content-box p:last-child {
+    margin-bottom: 0;
+}
+
+.content-box h3:first-child {
+    margin-top: 0;
 }
