@@ -13,60 +13,6 @@
 /* new modifications */
 
 
-.socialbar, .companybar {
-    overflow: auto;
-    margin-right: 30px;
-    margin-top: 8px;
-}
- 
-.socialbar li {
-    display: inline-block;
-}
- 
-.socialbar li a i {
-    background: #555;
-    color: #fff;
-    width: 56px;
-    height: 56px;
-    border-radius: 30px;
-    text-align: center;
-    margin-right: 8px;
-    padding-top: 15%;
-    transition: all 0.2s ease-in-out;
-}
-
-.socialbar li a i:hover {
-    opacity: .7;
-}
-
-.companybar img {
-    height: 100px;
-}
-
-.companybar li {
-    display: inline-block;
-}
-
-.companybar .company-tufts {
-    height: 110px;
-}
-.companybar .company-avast {
-    height: 100px;
-}
-.companybar .company-ge {
-    height: 106px;
-}
-
-.fa-facebook {
-    background:#3b5998 !important;
-} 
-.fa-linkedin {
-    background:#007bb6 !important;
-}
-.fa-github {
-    background:#555 !important;
-}
-
 img.semi-grayscale {
     transition: filter 0.3s ease;
     transition: -webkit-filter 0.3s ease;
@@ -84,11 +30,6 @@ img.semi-grayscale:hover {
   -webkit-filter: grayscale(0%);
 }
 
-
-
-#me_photo {
-    border: 5px solid #555;
-}
 
 
 
@@ -244,8 +185,8 @@ a img {
 
 /* Titles */
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Raleway", "Lato", "Helvetica", sans-serif;
-    font-weight: 300;
+    font-family: "Courier";
+    font-weight: 100;
     color: #333;
 }
 
@@ -253,7 +194,6 @@ h1, h2, h3, h4, h5, h6 {
 /* Paragraph & Typographic */
 p {
     line-height: 28px;
-    margin-bottom: 25px;
 }
 
 .centered {
@@ -335,7 +275,7 @@ a {
 
 a:hover,
 a:focus {
-    color: #c0392b;
+    color: #3cb6ff;
     text-decoration: none;
     outline: 0;
 }
@@ -356,12 +296,12 @@ a:after {
    ========================================================================== */
 
 #headerwrap {
-    background:
-        radial-gradient(black 15%, transparent 16%) 0 0,
-        radial-gradient(black 15%, transparent 16%) 8px 8px,
-        radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
-        radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
-    background-color:#6A0000;
+    /*background:*/
+        /*radial-gradient(black 15%, transparent 16%) 0 0,*/
+        /*radial-gradient(black 15%, transparent 16%) 8px 8px,*/
+        /*radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,*/
+        /*radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;*/
+    background-color:#333;
     background-size:16px 16px;
 	text-align:center;
 }
@@ -370,10 +310,7 @@ a:after {
 	color:#ffffff;
 	margin-top: 150px;
 	padding-bottom: 30px;
-	letter-spacing: 8px;
 	font-size: 60px;
-	font-weight: bold;
-	/*text-shadow: 2px 2px 2px #222;*/
 }
 
 #headerwrap p {
@@ -425,6 +362,7 @@ a:after {
 #footerwrap h4 {
 	color: white;
 }
+
 
 
 /* ==========================================================================
@@ -713,3 +651,11 @@ a:after {
     }
 }
 
+.img-profile {
+    margin-top: 5em;
+    margin-bottom: 4em;
+}
+
+.social-small {
+    font-size: 14px !important;
+}
