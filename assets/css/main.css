@@ -154,18 +154,6 @@ a:after {
     font-size: 60px;
 }
 
-.footer {
-    background: #2b2b2b;
-    margin-top: 0px;
-    padding-top: 40px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #ddd;
-    text-align: center;
-}
-
-.footer h4 {
-    color: #ffffff;
-}
 
 .white h1 {
     padding-top: 35px;
