@@ -20,10 +20,6 @@ body {
     height: 200px;
 }
 
-.social-small {
-    font-size: 14px !important;
-}
-
 ::-moz-selection {
     background: #f2c2c9;
     color: #E8CAA4;
@@ -34,15 +30,6 @@ body {
     background: #16a085;
     color: #E8CAA4;
     text-shadow: none;
-}
-
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
 }
 
 img {
@@ -81,21 +68,6 @@ body {
 .navbar-default .navbar-nav > li > a:focus {
     background-color: #16a085;
     color: white;
-}
-
-hr {
-    position: relative;
-    border: none;
-}
-
-hr:before {
-    content: " ";
-    position: absolute;
-    top: 0;
-    left: 25%;
-    width: 50%;
-    height: 2px;
-    background: #ccc;
 }
 
 a img {
@@ -199,6 +171,14 @@ a:after {
     background-image: url('../img/bg/prague1.jpg')
 }
 
+.social-bar {
+    font-size: 2em !important;
+}
+
+.social-small {
+    font-size: 0.8em !important;
+}
+
 @media screen and (max-width: 1050px), screen and (max-device-width: 1050px) {
 }
 
@@ -228,12 +208,12 @@ a:after {
 .content-box {
     background: white;
     box-shadow: 0 0 1px 0 #c4c4c4;
-    padding: 5em;
+    padding: 5rem;
     margin-top: 2em;
 }
 
 .page-container {
-    height: 100%;
+    min-height: 100%;
 }
 
 .content-box p:last-child {
