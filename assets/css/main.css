@@ -62,7 +62,7 @@ body {
 }
 
 .row {
-    margin-right: 0px;
+    margin-right: 0;
     margin-left: -15px;
 }
 
@@ -71,7 +71,7 @@ body {
 }
 
 .navbar-toggle {
-    border: 0px solid transparent;
+    border: 0 solid transparent;
 }
 
 .navbar-default .navbar-nav > li > a:hover,
