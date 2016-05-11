@@ -10,7 +10,7 @@
           integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css" rel="stylesheet">
     <link href="assets/css/main.css" rel="stylesheet">
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+    <link href="assets/css/typed-cursor.css" rel="stylesheet">
 </head>
 
 <body data-spy="scroll" data-offset="0" data-target="#navbar-main">
@@ -28,7 +28,7 @@
                 <ul class="nav navbar-nav">
                     <li><a href="#home" class="smoothScroll">Home</a></li>
                     <li><a href="#about" class="smoothScroll"> Bio &amp; contact </a></li>
-                    <li><a href="#portfolio" class="smoothScroll"> Code &amp; projects </a></li>
+                    <!--<li><a href="#portfolio" class="smoothScroll"> Code &amp; projects </a></li>-->
                 </ul>
             </div>
         </div>
@@ -38,14 +38,14 @@
 <div id="home"></div>
 <div class="header">
     <header class="clearfix">
-        <h1> ~/louis-rassaby/ </h1>
+        <h1 class="typed-header"><span style='color:#004710'>~/</span></h1>
     </header>
 </div>
 
 <div class="container" id="about">
     <div class="row white">
         <div class="centered">
-            <img class="img img-profile" src="assets/img/me/main_photo.jpg" height="200">
+            <img class="img img-profile" src="assets/img/me/main_photo.jpg">
         </div>
     </div>
     <div class="row">
@@ -119,10 +119,12 @@
     </div>
 </div>
 <section class="textdivider divider1"></section>
-
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
         integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
         crossorigin="anonymous"></script>
-<script src="assets/js/vendor/smoothscroll.js"></script>
+<script src="assets/js/vendor/smoothscroll.min.js"></script>
+<script src="assets/js/vendor/typed.min.js"></script>
+<script src="assets/js/app.js"></script>
 </body>
 </html>
