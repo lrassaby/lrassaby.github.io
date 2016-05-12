@@ -11,6 +11,7 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css" rel="stylesheet">
     <link href="assets/css/main.css" rel="stylesheet">
     <link href="assets/css/typed-cursor.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.9/jquery.fullPage.min.css">
 </head>
 
 <body data-spy="scroll" data-offset="0" data-target="#navbar-main">
@@ -25,9 +26,9 @@
                 </button>
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a href="#home" class="smoothScroll">Home</a></li>
-                    <li><a href="#about" class="smoothScroll"> About </a></li>
+                <ul id="main-menu" class="nav navbar-nav">
+                    <li data-menuanchor="home" class="active"><a href="#home" class="smoothScroll">Home</a></li>
+                    <li data-menuanchor="about"><a href="#about" class="smoothScroll"> About </a></li>
                     <li class="disabled"><a href="#projects" class="smoothScroll"> Projects </a></li>
                     <li class="disabled"><a href="#photos" class="smoothScroll"> Photos </a></li>
                     <li class="disabled"><a href="#music" class="smoothScroll"> Music </a></li>
@@ -37,16 +38,13 @@
         </div>
     </div>
 </div>
-
-<div class="page-container">
-    <div id="home"></div>
-    <div class="header">
-        <header class="clearfix">
-            <h1><span class="typed-header"></span></h1>
-        </header>
-    </div>
-
-    <div class="container">
+<div id="fullpage">
+    <div class="section">
+        <div class="header">
+            <header class="clearfix">
+                <h1><span class="typed-header"></span></h1>
+            </header>
+        </div>
         <div class="row text-center">
             <img class="img img-profile" src="assets/img/me/main_photo.jpg">
         </div>
@@ -71,17 +69,12 @@
             </div>
         </div>
     </div>
-</div>
-
-<!-- The rest of the page-->
-<div style="background: #333; padding: 4em 1em;" id="about">
-    <div class="container">
+    <div class="section">
         <div class="row">
             <div class="col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3 content-box">
                 <h3>
                     Hiya! I'm Louis.
                 </h3>
-                <hr>
                 <p>
                     I'm an Aussie-American software engineer and cellist based in NYC.
                 </p>
@@ -105,6 +98,8 @@
                 </p>
             </div>
         </div>
+    </div>
+    <div class="section">
         <div class="row">
             <div class="col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3 content-box">
                 <p>
@@ -136,8 +131,11 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
         integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
         crossorigin="anonymous"></script>
-<script src="assets/js/vendor/smoothscroll.min.js"></script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.9/jquery.fullPage.min.js"></script>
+<!--<script src="assets/js/vendor/smoothscroll.min.js"></script>-->
 <script src="assets/js/vendor/typed.min.js"></script>
+<script src="assets/js/vendor/jquery.fullpage.min.js"></script>
 <script src="assets/js/app.js"></script>
 </body>
 </html>
