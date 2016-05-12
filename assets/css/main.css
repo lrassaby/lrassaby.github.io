@@ -168,7 +168,8 @@ a:after {
 }
 
 .divider1 {
-    background-image: url('../img/bg/prague1.jpg')
+    background: green;
+    /*background-url('../img/bg/prague1.jpg')*/
 }
 
 .social-bar {
@@ -222,4 +223,20 @@ a:after {
 
 .content-box h3:first-child {
     margin-top: 0;
+}
+
+#fullpage section:nth-child(2) a {
+    color: rgb(0, 177, 183);
+}
+
+#fullpage section:nth-child(3) a {
+    color: rgb(0, 143, 204);
+}
+
+.green {
+    color: #3D9E59;
+}
+
+a.green:hover {
+    color: #53b85e;
 }
