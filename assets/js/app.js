@@ -13,6 +13,7 @@ $(document).ready(function () {
         anchors: ['home', 'about', 'about2'],
         menu: '#main-menu',
         fixedElements: '#navbar-main',
+        verticalCentered: true,
         sectionsColor: ['white', '#4BBFC3', '#7BAABE', 'whitesmoke', '#000']
     });
 });
