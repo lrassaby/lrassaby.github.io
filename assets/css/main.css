@@ -75,7 +75,7 @@ a img {
 }
 
 h1 {
-    font-family: "Courier", serif;
+    font-family: "Courier New", "Courier", monospace;
     font-weight: 100;
     color: #333;
 }
