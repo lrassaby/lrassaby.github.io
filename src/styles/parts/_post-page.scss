@@ -1,0 +1,125 @@
+.page-image {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  height: 500px;
+  background-color: $white;
+  overflow: hidden;
+
+  .cover-image {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.page-content {
+  margin-top: -80px;
+  margin-bottom: 100px;
+  background-color: $white;
+  padding: 20px;
+  box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.1);
+}
+
+.header-page {
+  position: relative;
+  margin-bottom: 30px;
+  h1 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 36px;
+    text-align: center;
+    margin: 0 0 20px;
+    color: $dark-purple;
+  }
+  .page-date {
+    text-align: center;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 300;
+  }
+}
+
+.page-footer {
+  margin-top: 30px;
+  padding-bottom: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid $lighten-gray;
+  .page-tag,
+  .page-share {
+    text-transform: uppercase;
+    font-size: 12px;
+    color: $dark-purple;
+  }
+  .page-tag {
+    margin-bottom: 10px;
+    a {
+      text-decoration: none;
+      color: $violet;
+      &:hover {
+        opacity: .8;
+      }
+    }
+  }
+  .page-share {
+    a {
+      text-decoration: none;
+      color: $light-gray;
+      margin-left: 10px;
+      font-size: 18px;
+      &:hover {
+        opacity: .8;
+      }
+    }
+  }
+}
+
+
+.recent-box {
+  margin-top: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid $lighten-gray;
+  .recent-title {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    color: $dark-purple;
+    text-align: center;
+    margin: 0 0 30px;
+  }
+  .recent-list {
+    .recent-item {
+      position: relative;
+      display: inline-block;
+      width: 24%;
+      height: 150px;
+      margin-left: 0.5%;
+      margin-bottom: 0.5%;
+      transition: all .3s;
+      span {
+        position: absolute;
+        font-size: 12px;
+        left: 2.5%;
+        bottom: 10%;
+        color: $white;
+      }
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}
+
+
+.iframe-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}

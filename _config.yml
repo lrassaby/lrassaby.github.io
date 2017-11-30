@@ -1,0 +1,58 @@
+# Site settings
+title: Louis Rassaby
+description: Musings in software, UX, and music.
+
+url: http://rassaby.com
+
+about_title: Contact
+projects_title: Musings
+
+# User settings
+user_description_appendix: |
+  This site is built in [Jekyll][jekyll] and hosted on [Github Pages][gh-pages]. If you like it, feel free to fork it on
+  [Github][github].
+
+  [github]: https://github.com/lrassaby/lrassaby.github.io
+  [gh-pages]: https://pages.github.com/
+  [jekyll]: https://jekyllrb.com
+
+
+email: louis@rassaby.com
+linkedin: lrassaby
+github: lrassaby
+
+relevant_tags: ['tech', 'design', 'music', 'life']
+
+resume_url: https://drive.google.com/open?id=0B5vVg0C4jFacXzJ4b09XZmw2amc
+
+author: Louis Rassaby
+author_title: Software Developer
+author_photo: profile-photo.jpg
+user_description_short: |
+  My name is Louis Rassaby. I'm a software engineer and entrepreneur based in Brooklyn. My preferred language is
+  [Scala][scala].
+
+  Away from the keyboard, I love to create things. I play a weekly gig with my friends at Caffe Vivaldi in the West
+  Village.
+
+  [scala]: https://www.scala-lang.org/
+
+
+## Disqus
+disqus_identifier: rassaby
+
+## Tracker
+google_analytics_id: UA-109461282-1
+
+keywords: 'software,engineer,design,scala,cello,music'
+
+## URLs
+permalink: ':title/'
+
+baseurl: ''
+projects_url: '/'
+about_url: '/about'
+
+
+include: [_pages]
+exclude: ['package.json', 'src' , 'node_modules', 'Gemfile', 'LICENSE', 'gulpfile.js', 'README.md']

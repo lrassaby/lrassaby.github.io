@@ -1,144 +1,61 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Personal Website of Louis Rassaby">
-    <meta name="author" content="Louis Rassaby">
-    <title> Louis Rassaby </title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css" rel="stylesheet">
-    <link href="assets/css/main.css" rel="stylesheet">
-    <link href="assets/css/typed-cursor.css" rel="stylesheet">
-    <link rel="icon" href="assets/img/favicon.png"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.9/jquery.fullPage.min.css">
-</head>
-
-<body data-spy="scroll" data-offset="0" data-target="#navbar-main">
-
-<!-- NavBar -->
-<div id="navbar-main">
-    <div class="navbar navbar-inverse navbar-fixed-top">
+---
+layout: posts
+title: Home
+---
+<div class="flex-container">
+    {% include header.html %}
+    <div class="projects-content">
+    <section id="projects">
         <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <i class="fa fa-bars" style="font-size:30px; color:#fff;"></i>
-                </button>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul id="main-menu" class="nav navbar-nav">
-                    <li data-menuanchor="home" class="active"><a href="#home" class="smoothScroll">Home</a></li>
-                    <li data-menuanchor="about"><a href="#about" class="smoothScroll"> About </a></li>
-                    <li class="disabled"><a href="#projects" class="smoothScroll"> Projects </a></li>
-                    <li class="disabled"><a href="#photos" class="smoothScroll"> Photos </a></li>
-                    <li class="disabled"><a href="#music" class="smoothScroll"> Music </a></li>
-                    <li class="disabled"><a href="#blog" class="smoothScroll"> Blog </a></li>
-                </ul>
+            <div class="row blog-tags">
+                <div class="col-md-2 col-lg-3"></div>
+                <div class="col-xs-12 col-md-8 col-lg-6 text-center filter-buttons">
+                    <button class="btn btn-primary" data-filter="*">
+                        All
+                    </button>
+                    {% for tag in site.relevant_tags %}
+                    <button class="btn btn-secondary" data-filter=".{{tag}}">
+                        {{tag | capitalize }}
+                    </button>
+                    {% endfor %}
+                </div>
             </div>
         </div>
+        <div class="container-fluid">
+            <div class="post-grid">
+                <div class="grid-sizer col-xs-12 col-sm-6 col-md-6 col-lg-4"></div>
+                {% for post in site.posts %}
+                    <div class="grid-item col-xs-12 col-sm-6 col-md-6 col-lg-4 {{ post.tags | join: ' ' }}">
+                        <a href="{{post.url | prepend: site.baseurl}}">
+                            <div class="grid-item-content">
+                                <div class="card">
+                                    <div class="card-img-top">
+                                        {% if post.image %}
+                                        <img src="{{ "/assets/img/" | prepend: site.baseurl | append: post.image }}">
+                                        {% endif %}
+                                        {% if post.type == 'video' %}
+                                        <span class="play-button-icon fa-stack fa-lg">
+                                          <i class="fa fa-square fa-stack-1x"></i>
+                                          <i class="fa fa-youtube-play fa-stack-2x"></i>
+                                        </span>
+                                        {% endif %}
+                                    </div>
+                                    <div class="card-body">
+                                        <h4 class="card-title">
+                                            <a href="{{post.url | prepend: site.baseurl}}"> {{ post.title }} </a>
+                                        </h4>
+                                        <div class="card-text">
+                                            <div>{{ post.excerpt | remove: '<p>' | remove: '</p>' }}</div>
+                                            <small class="text-muted">{{post.date |  date: '%b %d, %Y'}}</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    {% endfor %}
+            </div>
+        </div>
+    </section>
     </div>
 </div>
-<div id="fullpage">
-    <section class="section align-top">
-        <div class="header">
-            <header>
-                <h1><span class="typed-header"></span></h1>
-            </header>
-        </div>
-        <div id="title-page-body" class="row text-center">
-            <img class="img img-profile" src="assets/img/me/main_photo.jpg">
-        </div>
-        <div id="title-page-footer">
-            <div class="row">
-                <div class="text-center col-lg-6 col-lg-offset-3 social-bar">
-                    <a href="http://github.com/lrassaby" class="green" target="_blank" title="GitHub"><i
-                            class="fa fa-github"></i></a>
-                    <a href="http://linkedin.com/in/lrassaby" class="green" target="_blank" title="LinkedIn"><i
-                            class="fa fa-linkedin"></i></a>
-                    <a href="http://facebook.com/lrassaby" class="green" target="_blank" title="Facebook"><i
-                            class="fa fa-facebook"></i></a>
-                    <a href="http://medium.com/@lrassaby" class="green" target="_blank" title="Medium"><i
-                            class="fa fa-medium social-small"></i></a>
-                    <a href="http://www.google.com/recaptcha/mailhide/d?k=01YmFUWNkuMPavZceDFMbXYQ==&amp;c=RXpKo5S3cxccsRIoW1X4n9n9dQpw9z79NHEcBcAJfB8="
-                       onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\07501YmFUWNkuMPavZceDFMbXYQ\75\75\46c\75RXpKo5S3cxccsRIoW1X4n9n9dQpw9z79NHEcBcAJfB8\075', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;"
-                       title="Email" class="green"><i class="fa fa-envelope social-small"></i></a>
-                </div>
-            </div>
-            <div class="row resume-download">
-                <div class="text-center col-lg-6 col-lg-offset-3">
-                    Download my <a href="assets/resume.pdf" class="green"> resume </a> here.
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="section">
-        <div class="row">
-            <div class="col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3 content-box">
-                <h3>
-                    Hiya! I'm Louis.
-                </h3>
-                <p>
-                    I'm an Aussie-American software engineer and cellist based in NYC.
-                </p>
-                <p>
-                <span>Coding for me is all about the creative process, and I like
-                making things that align with my other interests, like a </span>
-                    <a href="https://github.com/lrassaby/harmlang">musical programming language</a> or a <a
-                        href="https://github.com/lrassaby/magical-particles">
-                    simulation in 3d graphics</a>.
-                    Above all, I love using computers to solve big problems.
-                </p>
-                <p>
-                    <span>I'm currently working as a software engineer at</span>
-                    <a href="http://www.recombine.com" target="_blank"> Recombine</a>, a genetics startup in the
-                    Flatiron
-                    area.
-                    <span> To learn more about me, check out my </span>
-                    <a href="assets/resume.pdf"> resume </a>
-                    <span> or connect with me on </span>
-                    <a href="https://www.linkedin.com/in/lrassaby" target="_blank">LinkedIn</a>.
-                </p>
-            </div>
-        </div>
-    </section>
-    <section class="section">
-        <div class="row">
-            <div class="col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3 content-box">
-                <p>
-                    I'm using my 20s to explore and find the experiences, people, ideas, and places that challenge
-                    me,
-                    engage me, and make me happy.
-                </p>
-                <p>
-                <span>
-                    Away from the computer, I love to create things. Music is my biggest passion and I play a weekly gig with my
-                friends at
-                </span>
-                    <a href="http://www.caffevivaldi.com">Caffe Vivaldi </a>
-                    <span>in the West Village.</span>
-                </p>
-                <p>
-                <span> Over the past few
-                years, I've gotten pretty into photography, and I'm going to
-                update this website with some more photos and a blog soon! I'm also into cooking, especially </span>
-                    <a href="http://www.ottolenghi.co.uk/" target="_blank"> Mediterranean-style </a>
-                    <span> food. </span>
-                </p>
-            </div>
-        </div>
-    </section>
-</div>
-<section class="textdivider divider1"></section>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
-        integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
-        crossorigin="anonymous"></script>
-<script type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.9/jquery.fullPage.min.js"></script>
-<!--<script src="assets/js/vendor/smoothscroll.min.js"></script>-->
-<script src="assets/js/vendor/typed.min.js"></script>
-<script src="assets/js/vendor/jquery.fullpage.min.js"></script>
-<script src="assets/js/app.js"></script>
-</body>
-</html>

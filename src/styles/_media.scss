@@ -1,0 +1,133 @@
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+  .main-header {
+    .logo {
+      a {
+        font-size: 24px;
+      }
+    }
+  }
+
+  .post-card-box {
+    li {
+      width: 100%;
+      margin-bottom: 20px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .recent-box {
+    .recent-list {
+      .recent-item {
+        position: relative;
+        display: inline-block;
+        width: 49%;
+        height: 150px;
+        margin-left: 0.5%;
+        margin-bottom: 0.5%;
+        span {
+          position: absolute;
+          font-size: 12px;
+          left: 2.5%;
+          bottom: 10%;
+          color: $white;
+        }
+      }
+    }
+  }
+
+}
+
+@media only screen and (max-width: 480px) {
+  .blog-tags {
+    // styles from .btn-sm
+    .btn {
+      padding: .25rem .5rem;
+      font-size: .875rem;
+      line-height: 1.5;
+      border-radius: .2rem;
+    }
+  }
+
+
+  .wrapper {
+    max-width: 95%;
+  }
+
+  .page-content {
+    margin-top: -50px;
+    padding: 15px;
+  }
+
+  .header-page {
+    margin-bottom: 20px;
+    h1 {
+      font-size: 27px;
+      margin: 0 0 10px;
+    }
+    .page-date {
+      font-size: 14px;
+    }
+  }
+
+  .main-header {
+    .logo {
+      a {
+        font-size: 21px;
+      }
+    }
+  }
+  .menu-icon,
+  .menu-icon-close,
+  .search-icon,
+  .search-icon-close {
+    font-size: 16px;
+  }
+
+  .page-image {
+    height: 380px;
+  }
+
+  .recent-box {
+    .recent-list {
+      .recent-item {
+        position: relative;
+        display: inline-block;
+        width: 99%;
+        height: 150px;
+        margin-left: 0.5%;
+        margin-bottom: 0.5%;
+        span {
+          position: absolute;
+          font-size: 12px;
+          left: 2.5%;
+          bottom: 10%;
+          color: $white;
+        }
+      }
+    }
+  }
+
+  .author-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    .author-img {
+      height: 100px;
+      width: 100px;
+      margin: 0 0 10px;
+    }
+    .author-desc {
+      h2 {
+        margin: 0 0 10px;
+      }
+      p {
+        margin: 0 0 15px;
+      }
+    }
+  }
+
+}

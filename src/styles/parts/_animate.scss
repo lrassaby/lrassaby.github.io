@@ -1,0 +1,44 @@
+.animate .main-header,
+.animate .page-image,
+.animate .page-content,
+.animate .about-container,
+.animate .post-card-box,
+.animate .projects-content {
+  animation-duration: 0.7s;
+  animation-fill-mode: both;
+  animation-name: fadeInDown;
+}
+
+.animate .main-header,
+.animate .page-image {
+  animation-delay: 0.5s;
+}
+
+.animate .page-content,
+.animate .about-container,
+.animate .post-card-box,
+.animate .projects-content {
+  animation-delay: 0.75s;
+}
+
+@-webkit-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

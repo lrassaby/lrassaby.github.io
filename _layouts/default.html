@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+  <body class="d-none">
+      {{ content }}
+      {% include footer.html %}
+  </body>
+</html>
