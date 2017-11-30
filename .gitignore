@@ -4,4 +4,4 @@ node_modules
 .idea/
 Gemfile.lock
 .DS_Store
-parkage-lock.json
+package-lock.json

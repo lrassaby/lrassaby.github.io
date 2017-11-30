@@ -10,13 +10,13 @@ permalink: /about/
             <img src="{{site.baseurl}}/assets/img/{% if site.author_photo %}{{site.author_photo}}{% endif %}" alt="{{site.author}}">
         </div>
       <ul class="contact-list">
-        {% if site.email %}
-        <li class="email"><a href="mailto:{{site.email}}"><i class="fa fa-envelope-o"></i></a></li>
+        {% if site.linkedin %}
+        <li class="linkedin"><a href="https://in.linkedin.com/in/{{site.linkedin}}" target="_blank"><i class="fa fa-linkedin"></i></a></li>
         {% else %}
         {% endif %}
 
-        {% if site.linkedin %}
-        <li class="linkedin"><a href="https://in.linkedin.com/in/{{site.linkedin}}" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        {% if site.email %}
+        <li class="email"><a href="mailto:{{site.email}}"><i class="fa fa-envelope-o"></i></a></li>
         {% else %}
         {% endif %}
 
