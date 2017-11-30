@@ -23,4 +23,3 @@ bundle exec gulp
 Inspired by
 - [Adam Blog](https://github.com/artemsheludko/adam-blog)
 - [Isotope](https://isotope.metafizzy.co/)
-- [Particles.js](http://vincentgarreau.com/particles.js/)
