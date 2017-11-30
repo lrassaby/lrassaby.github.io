@@ -73,6 +73,19 @@
 
 .blog-tags {
   margin: 20px auto;
+  .btn {
+    &:focus {
+      box-shadow: none;
+    }
+  }
+  .btn-primary {
+    background: black;
+    border-color: black;
+    &:hover {
+      background: black;
+      border-color: black;
+    }
+  }
 }
 
 

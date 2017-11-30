@@ -28,7 +28,7 @@ title: Home
                     <div class="grid-item col-xs-12 col-sm-6 col-md-6 col-lg-4 {{ post.tags | join: ' ' }}">
                         <a href="{{post.url | prepend: site.baseurl}}">
                             <div class="grid-item-content">
-                                <div class="card">
+                                <div class="card rounded-0">
                                     <div class="card-img-top">
                                         {% if post.image %}
                                         <img src="{{ "/assets/img/" | prepend: site.baseurl | append: post.image }}">
