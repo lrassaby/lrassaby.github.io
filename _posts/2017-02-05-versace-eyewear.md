@@ -1,16 +1,15 @@
 ---
 layout: post
-title: Versace Eyewear 
-subtitle: Spring 2017 Campaign
+title: Versace Eyewear Soundtrack
 date: 2017-02-05 13:35:00 -0400
 image: versace-eyewear.jpg
 image_bg: versace-eyewear-bg.jpg
 type: video
-primary: true
 tags: [music, cello]
+demo: https://www.youtube.com/watch?v=ZRonQmAInfo
 ---
-In September of 2016, I recorded this commercial for [Versace Eyewear][versace-eyewear] with the unstoppable flamenco guitarist,
-[Jackson Scott][jackson].
+In September of 2016, I recorded this original composition for [Versace Eyewear][versace-eyewear] with the unstoppable flamenco guitarist,
+[Jackson Scott][jackson]. It was used as part of Versace's Spring 2017 campaign.
 
 
 <div class="iframe-wrapper">

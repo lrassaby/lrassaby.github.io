@@ -20,6 +20,7 @@ user_description_appendix: |
 email: louis@rassaby.com
 linkedin: lrassaby
 github: lrassaby
+angellist: rassaby
 
 relevant_tags: ['tech', 'design', 'music']
 
@@ -29,11 +30,11 @@ author: Louis Rassaby
 author_title: Software Developer
 author_photo: profile-photo.jpg
 user_description_short: |
-  My name is Louis Rassaby. I'm a software engineer and entrepreneur based in Brooklyn. My preferred language is
+  My name is Louis Rassaby. I'm a software engineer, entrepreneur, and cellist based in Brooklyn. My preferred language is
   [Scala][scala].
 
   Away from the keyboard, I love to create things. I play a weekly gig with my friends at Caffe Vivaldi in the West
-  Village.
+  Village. I'm in a band called Cellolele.
 
   [scala]: https://www.scala-lang.org/
 

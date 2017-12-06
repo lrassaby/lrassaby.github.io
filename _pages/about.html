@@ -24,6 +24,11 @@ permalink: /about/
         <li class="github"><a href="http://github.com/{{site.github}}" target="_blank"><i class="fa fa-github"></i></a></li>
         {% else %}
         {% endif %}
+
+        {% if site.angellist %}
+        <li class="angellist"><a href="http://angel.co/{{site.angellist}}" target="_blank"><i class="fa fa-angellist"></i></a></li>
+        {% else %}
+        {% endif %}
       </ul>
       <p class="text-center">Download my <a class="link" href="{{site.resume_url}}"> resume </a> here.</p>
 
