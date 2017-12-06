@@ -9,7 +9,7 @@ tags: [music, cello]
 demo: https://www.youtube.com/watch?v=ZRonQmAInfo
 ---
 In September of 2016, I recorded this original composition for [Versace Eyewear][versace-eyewear] with the unstoppable flamenco guitarist,
-[Jackson Scott][jackson]. It was used as part of Versace's Spring 2017 campaign.
+[Jackson Scott][jackson]. It was used in Versace's Spring 2017 campaign.
 
 
 <div class="iframe-wrapper">

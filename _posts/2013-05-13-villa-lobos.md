@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Villa-Lobos –– Assobio a Jato
+title: Villa-Lobos — Assobio a Jato
 date: 2013-05-13 00:00:00 -0000
 image: villa-lobos.jpg
 type: video
