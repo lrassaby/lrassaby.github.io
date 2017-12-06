@@ -21,5 +21,6 @@ bundle exec gulp
 ```
 
 Inspired by
-- [Adam Blog](https://github.com/artemsheludko/adam-blog)
+- [Adam Blog](https://github.com/artemsheludko/adam-blog/)
 - [Isotope](https://isotope.metafizzy.co/)
+- [Jekyll](https://github.com/jekyll/jekyll/)
