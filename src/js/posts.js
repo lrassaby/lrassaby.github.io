@@ -1,9 +1,17 @@
 document.addEventListener("DOMContentLoaded", function () {
-    var iso = new Isotope('.post-grid', {
+    var grid = document.querySelector('.post-grid');
+
+    var iso = new Isotope(grid, {
         itemSelector: '.grid-item',
         columnWidth: '.grid-sizer',
         percentPosition: true,
         layoutMode: 'packery'
+    });
+
+
+    imagesLoaded(grid).on('progress', function () {
+        // layout Isotope after each image loads
+        iso.layout();
     });
 
 
