@@ -102,6 +102,8 @@
       margin-left: 0.5%;
       margin-bottom: 0.5%;
       transition: all .3s;
+      background-size: cover !important;
+      box-shadow: 0 500px rgba(0, 0, 0, 0.4) inset;
       span {
         position: absolute;
         font-size: 12px;
