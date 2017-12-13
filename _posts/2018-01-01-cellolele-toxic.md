@@ -3,7 +3,7 @@ layout: post
 title: Toxic - Cellolele
 date: 2017-12-12 00:00:00 -0000
 tags: [music, cello, cellolele, cover]
-image: cellolele-living-room.jpg
+image: cellolele-arch.jpg
 type: video
 ---
 Here's a cover of Britney Spears' Toxic I put together with Shannon Ferguson. For more videos, see Shannon's 
