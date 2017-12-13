@@ -3,7 +3,7 @@ layout: post
 title: GPU Particle Simulations
 date: 2014-06-20 13:35:00 -0400
 tags: [tech, visualization, shaders]
-image: particles.png
+image: particles.jpg
 type: video
 github: https://github.com/lrassaby/magical-particles
 ---
