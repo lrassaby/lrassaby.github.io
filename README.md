@@ -10,7 +10,7 @@ Tested with:
 
 If you're using NVM, this will get you to the right Node/NPM versions:
 ```$bash
-nvm use --delete-prefix v8.0.0
+nvm use v8.0.0
 ```
 
 To run:
