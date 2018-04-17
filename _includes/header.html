@@ -1,16 +1,42 @@
 <header class="main-header">
-  <div class="wrapper">
-    <div class="header-flex">
-      <div class="left-header-container">
-        <a href="{{site.projects_url}}"> {{ site.projects_title }} </a>
-      </div>
-      <a class="logo" href="{{site.baseurl}}/">
-        <div class="author-name">{{ site.author }}</div>
-        <div class="author-title">{{ site.author_title }}</div>
-      </a>
-      <div class="right-header-container">
-        <a href="{{site.about_url}}"> {{ site.about_title }} </a>
-      </div>
+    <div class="wrapper">
+        <div class="header-flex">
+            <div class="left-header-container">
+                <a href="{{site.projects_url}}"> {{ site.projects_title }} </a>
+            </div>
+            <div class="center-header-container">
+                <a class="logo" href="{{site.baseurl}}/">
+                    <div class="author-name">{{ site.author }}</div>
+                    <div class="author-title">{{ site.author_title }}</div>
+                </a>
+                <ul class="contact-list">
+                    {% if site.linkedin %}
+                    <li class="linkedin"><a href="https://in.linkedin.com/in/{{site.linkedin}}" target="_blank"><i
+                            class="fa fa-linkedin"></i></a></li>
+                    {% else %}
+                    {% endif %}
+
+                    {% if site.email %}
+                    <li class="email"><a href="mailto:{{site.email}}"><i class="fa fa-envelope-o"></i></a></li>
+                    {% else %}
+                    {% endif %}
+
+                    {% if site.github %}
+                    <li class="github"><a href="http://github.com/{{site.github}}" target="_blank"><i
+                            class="fa fa-github"></i></a></li>
+                    {% else %}
+                    {% endif %}
+
+                    {% if site.angellist %}
+                    <li class="angellist"><a href="http://angel.co/{{site.angellist}}" target="_blank"><i
+                            class="fa fa-angellist"></i></a></li>
+                    {% else %}
+                    {% endif %}
+                </ul>
+            </div>
+            <div class="right-header-container">
+                <a href="{{site.about_url}}"> {{ site.about_title }} </a>
+            </div>
+        </div>
     </div>
-  </div>
 </header> <!-- End Header -->
