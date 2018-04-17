@@ -17,7 +17,7 @@ To run:
 ```$bash
 bundle install
 npm install
-bundle exec gulp
+npx bundle exec gulp
 ```
 
 Inspired by
