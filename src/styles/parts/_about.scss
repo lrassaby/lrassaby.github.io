@@ -7,7 +7,7 @@
 .about-container {
   margin: 3em auto 0;
   position: relative;
-  text-align: left;
+  text-align: justify;
   padding-bottom: 30px;
 
   p {
@@ -30,18 +30,10 @@
     margin: 2em auto;
   }
   .author-image-container {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     border-radius: 100%;
     overflow: hidden;
     margin: 0 auto 30px;
-  }
-}
-
-.user-details {
-  text-align: center;
-  font-size: 16px;
-  .profile-photo {
-    height: 150px;
   }
 }

@@ -24,7 +24,7 @@ Since then, the design evolved. The colors became brighter, and the lines connec
 {% include captioned-image.html url="phosphorus-new.png" description="v3" style="height: 150px;" %}
 </div>
 
-It looks pretty cool on the [website][phosphorus], but my favorite spot I've seen the logo I made is on a cupcake.
+It's cool seeing your logo on the [web][phosphorus], but my favorite spot I've seen the logo I made is on a cupcake.
 
 ![cookie]
 

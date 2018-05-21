@@ -9,6 +9,9 @@ projects_title: Projects
 
 # User settings
 user_description_appendix: |
+  I created this site to write about my interests: startups and entrepreneurship, design, data-intensive applications,
+  functional programming, AR/VR, and machine learning. Above all, I love using computers to solve big problems.
+
   I built this site in [Jekyll][jekyll], and it's hosted for free on [Github Pages][gh-pages]. It's open source, so if
   you like it, feel free to fork it on [Github][github] and make your own version.
 
@@ -31,12 +34,11 @@ author_title: Software Engineer
 author_photo: profile-photo.jpg
 user_description_short: |
   I'm a Brooklyn-based software engineer and entrepreneur. I'm the founder of [Wirefreight][wirefreight], a customer-service SaaS platform for logistics. I
-  also co-founded the [Postpartum Project][ppp], a resource network for new mothers.
+  also co-founded the [Postpartum Project][ppp], a resource network for new mothers. Previously, I led the new products
+  team at Phosphorus Genomics, analyzing genetic data and educating tens of thousands of people on their risks of
+  developing or passing on genetic diseases.
 
-  I created this site to write about my interests: startups and entrepreneurship, design, data-intensive applications,
-  functional programming, AR/VR, and machine learning. Above all, I love using computers to solve big problems.
-
-  Away from the keyboard, I make food and music. I play a weekly jazz cello gig with my friends at Caffe Vivaldi in the
+  Away from the keyboard, I make food and music. I play a regular jazz cello gig with my friends at Caffe Vivaldi in the
   West Village. I'm half of a band called [Cellolele][cellolele] and I once played in an ad for [Versace][versace].
 
   [scala]: https://www.scala-lang.org/
