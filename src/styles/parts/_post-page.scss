@@ -68,19 +68,20 @@
       }
     }
   }
-  .page-share {
-    a {
-      text-decoration: none;
-      color: $light-gray;
-      margin-left: 10px;
-      font-size: 18px;
-      &:hover {
-        opacity: .8;
-      }
+}
+
+
+.page-share {
+  a {
+    text-decoration: none;
+    color: $light-gray;
+    margin-left: 10px;
+    font-size: 18px;
+    &:hover {
+      opacity: .8;
     }
   }
 }
-
 
 .recent-box {
   margin-top: 30px;
