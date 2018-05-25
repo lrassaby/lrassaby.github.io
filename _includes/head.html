@@ -4,11 +4,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
   <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
-  <meta name="description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}"/>
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}"/>
   <meta name="keywords" content="{{ site.keywords }}{% if page.tags %},{{ page.tags | join ',' }}{% endif %}"/>
   <meta property="og:type" content="article"/>
   <meta property="og:title" content="{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}"/>
-  <meta property="og:description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}"/>
+  <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}"/>
   {% if page.image_bg %}
   <meta property="og:image" content="{{"/assets/img/" | prepend: site.baseurl | prepend: site.url | append: page.image_bg }}">
   {% elsif page.image %}

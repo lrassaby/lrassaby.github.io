@@ -1,6 +1,9 @@
 # Site settings
 title: Louis Rassaby
-description: Musings in software, UX, and music.
+description: |
+  Louis Rassaby is a Brooklyn-based software engineer and entrepreneur specializing in Scala and back-end development.
+  He's the founder of Wirefreight and the Postpartum Project. Previously, Louis led the new products engineering team
+  at Phosphorus Genomics.
 
 url: http://rassaby.com
 
@@ -35,7 +38,7 @@ author_photo: profile-photo.jpg
 user_description_short: |
   I'm a Brooklyn-based software engineer and entrepreneur. I'm the founder of [Wirefreight][wirefreight], a customer-service SaaS platform for logistics. I
   also co-founded the [Postpartum Project][ppp], a resource network for new mothers. Previously, I led the new products
-  team at Phosphorus Genomics, analyzing genetic data and educating tens of thousands of people on their risks of
+  engineering team at Phosphorus Genomics, analyzing genetic data and educating tens of thousands of people on their risks of
   developing or passing on genetic diseases.
 
   Away from the keyboard, I make food and music. I play a regular jazz cello gig with my friends at Caffe Vivaldi in the
@@ -54,7 +57,7 @@ disqus_identifier: rassaby
 ## Tracker
 google_analytics_id: UA-109461282-1
 
-keywords: 'software,engineer,design,scala,cello,music'
+keywords: 'software,engineer,design,scala,cello,music,louis rassaby'
 
 ## URLs
 permalink: ':title/'
