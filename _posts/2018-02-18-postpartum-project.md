@@ -4,7 +4,7 @@ title: Postpartum Project
 date: 2018-02-18 00:00:00 -0000
 tags: [tech, design]
 image: ppp-landing.jpg
-website: postpartumproject.com
+website: https://postpartumproject.com
 excerpt_separator: <!--more-->
 published: true
 ---
@@ -34,5 +34,5 @@ help people find the best postpartum care.
 
 
 
-[ppp]: http://postpartumproject.com/
+[ppp]: https://postpartumproject.com/
 [atlantic]:  https://www.theatlantic.com/health/archive/2016/06/the-struggle-of-seeking-therapy-while-poor/484970/
