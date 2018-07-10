@@ -4,13 +4,12 @@ title: Learning Machine Learning
 date: 2018-05-21 00:00:00 -0000
 tags: [tech, data]
 image: machine-learning.jpg
-published: true
 ---
-Machine learning. Turns out, it's much more like statistics than software engineering. Either way, it's fascinating, 
-and I'm looking forward to applying it to more projects! Here's the progress I've made so far.
+Machine learning. Turns out, it's much more like statistics than software engineering. Here's the progress I've made so far.
+
 
 <div style="text-align: center;">
-{% include captioned-image.html url="machine-learning-xkcd.png" description="Basically statistics on steroids (XKCD)" style="height: 400px;" wrapperstyle="display: inline-block;" %}
+{% include captioned-image.html url="machine-learning-xkcd.png" description="Statistics on steroids" style="height: 400px;" wrapperstyle="display: inline-block;" %}
 </div>
 
 ### Progress

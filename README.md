@@ -20,7 +20,9 @@ npm install
 npx bundle exec gulp
 ```
 
+If you like the design, feel free to fork it and make your own version!
+
 Inspired by
-- [Adam Blog](https://github.com/artemsheludko/adam-blog/)
 - [Isotope](https://isotope.metafizzy.co/)
+- [Adam Blog](https://github.com/artemsheludko/adam-blog/)
 - [Jekyll](https://github.com/jekyll/jekyll/)

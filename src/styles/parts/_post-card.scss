@@ -14,66 +14,11 @@
   }
 }
 
-.post-card {
-  position: relative;
-
-  .post-card-image {
-    display: block;
-    width: 100%;
-    min-height: 150px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    &::after {
-      content: "";
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(0,0,0,.3);
-    }
-  }
-
-  .post-card-body {
-    position: absolute;
-    left: 5%;
-    bottom: 5%;
-
-    .post-card-link {
-      text-decoration: none;
-      display: block;
-    }
-
-    .post-card-title {
-      font-family: 'Lato', sans-serif;
-      font-weight: 700;
-      text-transform: uppercase;
-      font-size: 18px;
-      color: $white;
-      margin: 0 0 10px;
-      &:hover {
-        opacity: .8;
-      }
-    }
-
-    .tag {
-      text-decoration: none;
-      font-size: 10px;
-      text-transform: uppercase;
-      color: $white;
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
-}
-
 
 .blog-tags {
   margin: 20px auto;
   .btn {
+    font-family: Montserrat, sans-serif;
     &:focus {
       box-shadow: none;
     }
@@ -92,7 +37,7 @@
 .card {
   .card-title {
     font-size: 20px;
-    margin-bottom: 0;
+    margin-bottom: 12px;
     a {
       color: black;
     }

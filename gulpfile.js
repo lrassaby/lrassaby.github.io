@@ -68,12 +68,20 @@ gulp.task('js', function () {
         .pipe(gulp.dest('assets/js/'));
 });
 
+gulp.task('video', function () {
+    return gulp.src('src/video/**/*.mov')
+        .pipe(plumber())
+        .pipe(gulp.dest('assets/video/'));
+});
+
+
 
 gulp.task('watch', function () {
     gulp.watch('src/styles/**/*.scss', ['sass', 'jekyll-rebuild']);
     gulp.watch('src/js/**/*.js', ['js', 'jekyll-rebuild']);
     gulp.watch('src/img/**/*.{jpg,png,gif}', ['imagemin', 'jekyll-rebuild']);
+    gulp.watch('src/video/**/*.mov', ['video', 'jekyll-rebuild']);
     gulp.watch(['_config.yml', '*html', '_includes/*', '_pages/*', '_layouts/*', '_posts/*'], ['jekyll-rebuild']);
 });
 
-gulp.task('default', ['js', 'sass', 'browser-sync', 'imagemin', 'watch']);
+gulp.task('default', ['js', 'sass', 'browser-sync', 'imagemin', 'video', 'watch']);

@@ -31,7 +31,6 @@ layout: default
             {% endif %}
             </div>
             <div class="page-share">
-                <span>Share:</span>
                 <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url | append: site.baseurl }}{{ page.url }}" title="Share on Twitter" rel="nofollow" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                 <a href="https://facebook.com/sharer.php?u={{ site.url | append: site.baseurl }}{{ page.url }}" title="Share on Facebook" rel="nofollow" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                 <a href="https://plus.google.com/share?url={{ site.url | append: site.baseurl }}{{ page.url }}" title="Share on Google+" rel="nofollow" target="_blank"><i class="fa fa-google" aria-hidden="true"></i></a>
@@ -39,16 +38,19 @@ layout: default
         </div>
         {{page.content | markdownify}}
         <div class="page-footer">
-            <div class="page-share">
-                <span>Share:</span>
-                <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url | append: site.baseurl }}{{ page.url }}" title="Share on Twitter" rel="nofollow" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                <a href="https://facebook.com/sharer.php?u={{ site.url | append: site.baseurl }}{{ page.url }}" title="Share on Facebook" rel="nofollow" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                <a href="https://plus.google.com/share?url={{ site.url | append: site.baseurl }}{{ page.url }}" title="Share on Google+" rel="nofollow" target="_blank"><i class="fa fa-google" aria-hidden="true"></i></a>
-            </div><!-- End Share -->
+            <!--<div class="page-share">-->
+                <!--<div>-->
+                    <!--Share-->
+                <!--</div>-->
+                <!--<div>-->
+                    <!--<a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url | append: site.baseurl }}{{ page.url }}" title="Share on Twitter" rel="nofollow" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>-->
+                    <!--<a href="https://facebook.com/sharer.php?u={{ site.url | append: site.baseurl }}{{ page.url }}" title="Share on Facebook" rel="nofollow" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>-->
+                    <!--<a href="https://plus.google.com/share?url={{ site.url | append: site.baseurl }}{{ page.url }}" title="Share on Google+" rel="nofollow" target="_blank"><i class="fa fa-google" aria-hidden="true"></i></a>-->
+                <!--</div>-->
+            <!--</div>&lt;!&ndash; End Share &ndash;&gt;-->
         </div>
         {% include author-box.html %}
         {% include recent-posts.html %}
-        {% include disqus.html %}
     </div>
 </div> <!-- End Wrapper -->
 </article>
