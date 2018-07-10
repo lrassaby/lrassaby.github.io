@@ -27,7 +27,7 @@ and they involve copious paperwork. That means that it's far harder for poorer p
 
 While I can't solve all of therapy, I wanted to break down some of those barriers and help expand access to care.
 And so did Zoe Hicks, a therapist herself who founded the the [Postpartum Project][ppp] to help new mothers 
-find the care they need. Studies show that 1 in 5 women experiences postpartum depression. Now as co-founders, Zoe and I
+find the care they need. Now as co-founders, Zoe and I
 are expanding the Postpartum Project to help inform parents, mitigate stigmas, and 
 help people find the best postpartum care.
 
