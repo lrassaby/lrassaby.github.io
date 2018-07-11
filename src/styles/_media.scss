@@ -43,6 +43,11 @@
     }
   }
 
+
+  .about-container {
+    width: 400px;
+  }
+
 }
 
 @media only screen and (max-width: 480px) {
@@ -56,6 +61,10 @@
     }
   }
 
+
+  .about-container {
+    width: 100%;
+  }
 
   .wrapper {
     max-width: 95%;
