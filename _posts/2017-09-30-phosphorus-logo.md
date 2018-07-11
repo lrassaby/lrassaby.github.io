@@ -3,7 +3,7 @@ layout: post
 title: Design at Phosphorus
 date: 2017-09-30 13:35:00 -0400
 image: phosphorus-explosion-small.png
-tags: [design, logo]
+tags: [projects, design, logo]
 demo: http://www.phosphorus.com
 ---
 At [Phosphorus][phosphorus], my focus was building software to analyze genetic sequencing data. I can't share any of the 

@@ -2,7 +2,7 @@
 layout: post
 title: Postpartum Project
 date: 2018-02-18 00:00:00 -0000
-tags: [tech, design]
+tags: [projects, tech, design]
 image: ppp-landing.jpg
 website: https://postpartumproject.com
 excerpt_separator: <!--more-->

@@ -2,12 +2,14 @@
 layout: post
 title: Guns and Crime Visualization
 date: 2014-02-20 13:35:00 -0400
-tags: [tech, design, visualization, front-end]
+tags: [projects, tech, design, visualization, front-end]
 image: gun-distribution.png
 github: https://github.com/lrassaby/viz
 demo: http://rassaby.com/viz/final
 ---
+[demo]: http://rassaby.com/viz/final
+
 There is almost one gun per person in U.S., so it's no surprise that the U.S. also has the highest incidence of gun
 violence in the world. I wanted to create an interactive way of understanding the distribution of guns worldwide.
 
-For best results, view on a desktop rather than a mobile device.
+It's best viewed on desktop rather than mobile, and can be accessed [here][demo].

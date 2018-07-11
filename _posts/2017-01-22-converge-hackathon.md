@@ -5,7 +5,7 @@ date: 2017-01-22 00:00:00 -0000
 github: https://github.com/lrassaby/converge
 demo: http://rassaby.com/converge/
 image: converge-bg.png
-tags: [tech, design, hackathon]
+tags: [projects, tech, design, hackathon]
 excerpt_separator: <!--more-->
 ---
 In its 2016 "Visions of Future Shipping" [paper][wartsila-visions], [Wärtsilä][wartsila] proposed ideas that could change the way

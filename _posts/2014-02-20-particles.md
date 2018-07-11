@@ -2,11 +2,12 @@
 layout: post
 title: GPU Particle Simulations
 date: 2014-06-20 13:35:00 -0400
-tags: [tech, visualization, shaders]
+tags: [projects, tech, visualization, shaders]
 image: particles.jpg
 type: video
 github: https://github.com/lrassaby/magical-particles
 ---
+
 For our final graphics project, [Jayme Woogerd][jayme] and I implemented a
 configurable particle system in C using OpenGL buffer 
 objects, instancing, and GLSL shaders.

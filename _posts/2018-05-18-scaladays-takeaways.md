@@ -1,6 +1,6 @@
 ---
 layout: post
-title: GPU Processing Pipelines on AWS Batch with Array Jobs
+title: Liston Lab Light Field Microscopy Pipeline
 date: 2018-07-10 00:00:00 -0000
 tags: [tech-blog]
 image: lfmicroscope-crayons.jpg
