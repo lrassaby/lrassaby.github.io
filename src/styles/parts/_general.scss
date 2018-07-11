@@ -36,11 +36,11 @@ a {
 
 
 .btn-secondary {
-  background-color: $light-gray;
-  border-color: $light-gray;
+  background-color: $purple-gray;
+  border-color: $purple-gray;
   &:hover {
-    background-color: lighten($light-gray, 10%);
-    border-color: lighten($light-gray, 10%);
+    background-color: lighten($purple-gray, 10%);
+    border-color: lighten($purple-gray, 10%);
   }
 }
 

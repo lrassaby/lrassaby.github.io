@@ -8,7 +8,7 @@ image: machine-learning.jpg
 Machine learning. Just when you thought there were enough blog posts about the best way to learn, here's another.
 
 <div style="text-align: center;">
-{% include captioned-image.html url="machine-learning-xkcd.png" description="Statistics on steroids" style="height: 400px;" wrapperstyle="display: inline-block;" %}
+{% include captioned-image.html url="machine-learning-xkcd.png" description="Statistics on steroids" style="height: 400px;" %}
 </div>
 
 Jokes aside, there are so many online resources now for getting started with machine learning that the biggest problem

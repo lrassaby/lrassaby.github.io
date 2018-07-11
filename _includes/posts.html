@@ -1,0 +1,35 @@
+<div class="container-fluid">
+    <div class="post-grid">
+        <div class="grid-sizer col-xs-12 col-sm-6 col-md-6 col-lg-4"></div>
+        {% for post in site.posts %}
+        <div class="grid-item col-xs-12 col-sm-6 col-md-6 col-lg-4 {{ post.tags | join: ' ' }}">
+            <a href="{{post.url | prepend: site.baseurl}}">
+                <div class="grid-item-content">
+                    <div class="card">
+                        <div class="card-img-top">
+                            {% if post.image %}
+                            <img src="{{ "/assets/img/" | prepend: site.baseurl | append: post.image }}">
+                            {% endif %}
+                            {% if post.type == 'video' %}
+                            <span class="play-button-icon fa-stack fa-lg">
+                              <i class="fas fa-square fa-stack-1x"></i>
+                              <i class="fab youtube-logo fa-youtube fa-stack-2x"></i>
+                            </span>
+                            {% endif %}
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">
+                                <a href="{{post.url | prepend: site.baseurl}}"> {{ post.title }} </a>
+                            </h4>
+                            <div class="card-text">
+                                <div>{{ post.excerpt | remove: '<p>' | remove: '</p>' }}</div>
+                                <small class="text-muted">{{post.date |  date: '%b %d, %Y'}}</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</div>

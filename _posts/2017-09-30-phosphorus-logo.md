@@ -14,8 +14,8 @@ fact that we were doing genetic tests (hence the DNA double helix).
 
 
 <div style="text-align: center;">
-{% include captioned-image.html url="phosphorus-square.png" description="v1" style="height: 150px;" wrapperstyle="display: inline-block;" %}
-{% include captioned-image.html url="phosphorus-original.png" description="v2" style="height: 150px;" wrapperstyle="display: inline-block;" %}
+{% include captioned-image.html url="phosphorus-square.png" description="v1" style="height: 150px;" %}
+{% include captioned-image.html url="phosphorus-original.png" description="v2" style="height: 150px;" %}
 </div>
 
 Since then, the design evolved. The colors became brighter, and the lines connect to only one side.
