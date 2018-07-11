@@ -23,23 +23,15 @@
       box-shadow: none;
     }
   }
-  .btn-primary {
-    background: black;
-    border-color: black;
-    &:hover {
-      background: black;
-      border-color: black;
-    }
-  }
 }
 
 
 .card {
   .card-title {
-    font-size: 20px;
+    font-size: 26px;
     margin-bottom: 12px;
     a {
-      color: black;
+      color: $dark-purple;
     }
   }
   .card-body {
@@ -61,13 +53,13 @@
     top: 50%;
     transform: translate(-50%, -50%);
     font-size: 35px;
-    .fa-youtube-play {
+    .youtube-logo {
       color: #fc0d1b;
     }
     color: white;
   }
   border: 0;
-  box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.1)
+  box-shadow: 0 0 20px 0 rgba(0,0,0,0.1)
 }
 
 

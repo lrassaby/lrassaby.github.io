@@ -22,6 +22,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Playfair Display', serif;
   font-weight: 700;
+  color: $dark-purple;
 }
 
 img {
@@ -31,6 +32,25 @@ img {
 
 a {
   color: $violet;
+}
+
+
+.btn-secondary {
+  background-color: $light-gray;
+  border-color: $light-gray;
+  &:hover {
+    background-color: lighten($light-gray, 10%);
+    border-color: lighten($light-gray, 10%);
+  }
+}
+
+.btn-primary {
+  background: $light-purple;
+  border-color: $light-purple;
+  &:hover {
+    background: lighten($light-purple, 10%);
+    border-color: lighten($light-purple, 10%);
+  }
 }
 
 blockquote {

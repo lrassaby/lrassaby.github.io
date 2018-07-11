@@ -5,39 +5,29 @@
   margin-top: 30px;
   padding-bottom: 30px;
   border-bottom: 1px solid $lighten-gray;
-  .author-img {
-    width: 120px;
-    height: 120px;
+  .author-left {
     margin-right: 30px;
+    li {
+      a {
+        padding: 0;
+      }
+    }
+  }
+  .author-img {
+    min-width: 120px;
+    height: 120px;
     border-radius: 100%;
   }
-  .author-desc {
+  .author-right {
     h2 {
       margin: 0 0 10px;
     }
     p {
       margin: 0 0 10px;
     }
-    ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-    li {
-      display: inline-block;
-      margin-left: 10px;
-      &:first-child {
-        margin-left: 0;
-      }
-      a {
-        font-size: 18px;
-        color: $light-gray;
-        &:hover {
-          color: $violet;
-          transform: scale(1.1);
-        }
-        transition: all 350ms cubic-bezier(0.13, 0.43, 0.54, 1.82);
-      }
-    }
+  }
+
+  .contact-links {
+    margin-top: 15px;
   }
 }

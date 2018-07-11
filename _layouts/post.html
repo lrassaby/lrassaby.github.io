@@ -18,36 +18,23 @@ layout: default
             <div class="page-date"><time datetime="{{page.date}}">{{page.date | date: '%b %d, %Y'}}</time></div>
             <div class="page-links">
             {% if page.github %}
-            <a class="btn btn-secondary" href="{{page.github}}">GitHub</a>
+            <a class="btn btn-secondary" href="{{page.github}}" target="_blank">GitHub</a>
             {% endif %}
             {% if page.demo %}
-            <a class="btn btn-secondary" href="{{page.demo}}">Demo</a>
+            <a class="btn btn-secondary" href="{{page.demo}}" target="_blank">Demo</a>
             {% endif %}
             {% if page.website %}
-            <a class="btn btn-secondary" href="{{page.website}}">Visit the site</a>
+            <a class="btn btn-secondary" href="{{page.website}}" target="_blank">Visit the site</a>
             {% endif %}
             {% if page.paper %}
-            <a class="btn btn-secondary" href="{{page.paper}}">Whitepaper</a>
+            <a class="btn btn-secondary" href="{{page.paper}}" target="_blank">Whitepaper</a>
             {% endif %}
             </div>
-            <div class="page-share">
-                <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url | append: site.baseurl }}{{ page.url }}" title="Share on Twitter" rel="nofollow" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                <a href="https://facebook.com/sharer.php?u={{ site.url | append: site.baseurl }}{{ page.url }}" title="Share on Facebook" rel="nofollow" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                <a href="https://plus.google.com/share?url={{ site.url | append: site.baseurl }}{{ page.url }}" title="Share on Google+" rel="nofollow" target="_blank"><i class="fa fa-google" aria-hidden="true"></i></a>
-            </div>
+            {% include share-links.html %}
         </div>
         {{page.content | markdownify}}
         <div class="page-footer">
-            <!--<div class="page-share">-->
-                <!--<div>-->
-                    <!--Share-->
-                <!--</div>-->
-                <!--<div>-->
-                    <!--<a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url | append: site.baseurl }}{{ page.url }}" title="Share on Twitter" rel="nofollow" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>-->
-                    <!--<a href="https://facebook.com/sharer.php?u={{ site.url | append: site.baseurl }}{{ page.url }}" title="Share on Facebook" rel="nofollow" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>-->
-                    <!--<a href="https://plus.google.com/share?url={{ site.url | append: site.baseurl }}{{ page.url }}" title="Share on Google+" rel="nofollow" target="_blank"><i class="fa fa-google" aria-hidden="true"></i></a>-->
-                <!--</div>-->
-            <!--</div>&lt;!&ndash; End Share &ndash;&gt;-->
+
         </div>
         {% include author-box.html %}
         {% include recent-posts.html %}

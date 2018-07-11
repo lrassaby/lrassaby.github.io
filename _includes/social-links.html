@@ -1,0 +1,30 @@
+<ul class="contact-links">
+    {% if site.email %}
+    <li class="email" data-balloon="Email" data-balloon-pos="left"><a href="mailto:{{site.email}}"><i class="far fa-envelope"></i></a></li>
+    {% else %}
+    {% endif %}
+
+    {% if site.linkedin %}
+    <li class="linkedin" data-balloon="LinkedIn" data-balloon-pos="left"><a href="https://in.linkedin.com/in/{{site.linkedin}}" target="_blank"><i
+            class="fab fa-linkedin"></i></a></li>
+    {% else %}
+    {% endif %}
+
+    {% if site.github %}
+    <li class="github" data-balloon="GitHub" data-balloon-pos="right"><a href="http://github.com/{{site.github}}" target="_blank"><i
+            class="fab fa-github"></i></a></li>
+    {% else %}
+    {% endif %}
+
+    {% if site.angellist %}
+    <li class="angellist" data-balloon="AngelList" data-balloon-pos="right"><a href="http://angel.co/{{site.angellist}}" target="_blank"><i
+            class="fab fa-angellist"></i></a></li>
+    {% else %}
+    {% endif %}
+
+    {% if site.resume_url %}
+    <li class="resume" data-balloon="Resume" data-balloon-pos="right"><a href="{{site.resume_url}}"><i
+            class="far fa-file-alt"></i></a></li>
+    {% else %}
+    {% endif %}
+</ul>
