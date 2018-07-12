@@ -1,5 +1,5 @@
-.highlight {background-color: #faf9f9; border-radius: 3px; margin: 0;}
-.highlighter-rouge {color: $violet; font-weight: 400; border: 1px solid #607D8B; border-radius: 3px; padding: 0.1rem 0.5rem;}
+.highlight {background-color: #faf9f9;  margin: 0;}
+.highlighter-rouge {color: $dark-gray; font-weight: 400; background: $lighten-gray;  border: 1px solid $lighten-gray;}
 .highlight .hll { background-color: #ffc; }
 .highlight .c { color: #999; } /* Comment */
 .highlight .err { color: #a00; background-color: #faa; } /* Error */

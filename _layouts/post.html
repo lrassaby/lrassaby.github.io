@@ -10,36 +10,36 @@ layout: default
             {% elsif page.image %}
             <div class="cover-image" style="background: url({{"/assets/img/" | prepend: site.baseurl | append: page.image}}) center no-repeat; background-size: cover;"></div>
             {% endif %}
-</div>
-<div class="wrapper">
-    <div class="page-content">
-        <div class="header-page">
-            <h1 class="page-title">{{page.title}}</h1>
-            <div class="page-date"><time datetime="{{page.date}}">{{page.date | date: '%b %d, %Y'}}</time></div>
-            <div class="page-links">
-            {% if page.github %}
-            <a class="btn btn-secondary" href="{{page.github}}" target="_blank">GitHub</a>
-            {% endif %}
-            {% if page.demo %}
-            <a class="btn btn-secondary" href="{{page.demo}}" target="_blank">Demo</a>
-            {% endif %}
-            {% if page.website %}
-            <a class="btn btn-secondary" href="{{page.website}}" target="_blank">Visit the site</a>
-            {% endif %}
-            {% if page.paper %}
-            <a class="btn btn-secondary" href="{{page.paper}}" target="_blank">Whitepaper</a>
-            {% endif %}
-            </div>
-            {% include share-links.html %}
         </div>
-        {{page.content | markdownify}}
-        <div class="page-footer">
+        <div class="wrapper">
+            <div class="page-content">
+                <div class="header-page">
+                    <h1 class="page-title">{{page.title}}</h1>
+                    <div class="page-date"><time datetime="{{page.date}}">{{page.date | date: '%b %d, %Y'}}</time></div>
+                    <div class="page-links">
+                    {% if page.github %}
+                    <a class="btn btn-secondary" href="{{page.github}}" target="_blank">GitHub</a>
+                    {% endif %}
+                    {% if page.demo %}
+                    <a class="btn btn-secondary" href="{{page.demo}}" target="_blank">Demo</a>
+                    {% endif %}
+                    {% if page.website %}
+                    <a class="btn btn-secondary" href="{{page.website}}" target="_blank">Visit the site</a>
+                    {% endif %}
+                    {% if page.paper %}
+                    <a class="btn btn-secondary" href="{{page.paper}}" target="_blank">Whitepaper</a>
+                    {% endif %}
+                    </div>
+                    {% include share-links.html %}
+                </div>
+                {{page.content | markdownify}}
+                <div class="page-footer">
 
-        </div>
-        {% include author-box.html %}
-        {% include recent-posts.html %}
-    </div>
-</div> <!-- End Wrapper -->
-</article>
+                </div>
+                {% include author-box.html %}
+                {% include recent-posts.html %}
+            </div>
+        </div> <!-- End Wrapper -->
+    </article>
 {% include footer.html %}
 </div>
