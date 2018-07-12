@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Liston Lab Light Field Microscopy Pipeline
-date: 2018-07-10 00:00:00 -0000
+title: Scaladays Takeaways
+date: 2018-05-18 00:00:00 -0000
 tags: [tech-blog]
-image: lfmicroscope-crayons.jpg
+image: scala-bg.jpg
 published: false
 ---
 

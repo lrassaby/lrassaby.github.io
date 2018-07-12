@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Liston Lab Light Field Microscopy Pipeline
-date: 2018-07-10 00:00:00 -0000
+date: 2018-05-20 00:00:00 -0000
 tags: [projects]
 image: lfmicroscope-crayons.jpg
 published: false

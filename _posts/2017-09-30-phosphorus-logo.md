@@ -2,7 +2,7 @@
 layout: post
 title: Design at Phosphorus
 date: 2017-09-30 13:35:00 -0400
-image: phosphorus-explosion-small.png
+image: phosphorus-explosion-small.jpg
 tags: [projects, design, logo]
 demo: http://www.phosphorus.com
 ---
