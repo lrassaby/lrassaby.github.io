@@ -7,9 +7,9 @@ image: ppp-landing.jpg
 website: https://postpartumproject.com
 published: true
 ---
-The Postpartum Project is one of the one of the largest online resource directories of postpartum specialists, with over 10k unique users per month. I had been curious about startups like [Quartett](https://quartett.com) and [Talkspace](https://talkspace.com) for a while, and I wanted to explore the space in a more concrete way. 
+The Postpartum Project is one of the one of the largest online resource directories of postpartum specialists, with over 10k unique users per month. I had been curious about startups like [Quartet](https://quartethealth.com) and [Talkspace](https://talkspace.com) for a while, and I wanted to explore the space in a more concrete way. 
 
-Zoe Hicks, a friend of mine who is therapist and mother herself, founded the the Postpartum Project a few years ago to help new mothers find the care they need. This year, we decided to team up.
+Zoe Hicks, a friend of mine who is therapist and mother herself, founded the Postpartum Project a few years ago to help new mothers find the care they need. This year, we decided to team up.
 
 I started with a redesign of the site.
 
@@ -58,7 +58,7 @@ Enabling a CDN, updating dependencies, and adding Google Analytics all helped mo
 My next plans are to improve search functionality and speed of the site. 
 
 Working on the Postpartum Project has inspired me to understand the therapy-tech space better. There are hundreds of treatable 
-mental health conditions. Multiply that with dozens of common modalities, and it’s a headache to even know where 
+mental health conditions. Multiply that with dozens of different treatment techniques and approaches, and it’s a headache to even know where 
 to start looking for a therapist. Even if you find some promising therapists, getting [past their voicemail][atlantic] might 
 mean calling multiple different therapists. And yet, many therapists still struggle to fill their caseloads. It’s clear there’s still plenty of room for startups to disrupt the space.
 
