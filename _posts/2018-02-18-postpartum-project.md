@@ -60,7 +60,9 @@ My next plans are to improve search functionality and speed of the site.
 Working on the Postpartum Project has inspired me to understand the therapy-tech space better. There are hundreds of treatable 
 mental health conditions. Multiply that with dozens of different treatment techniques and approaches, and it’s a headache to even know where 
 to start looking for a therapist. Even if you find some promising therapists, getting [past their voicemail][atlantic] might 
-mean calling multiple different therapists. And yet, many therapists still struggle to fill their caseloads. It’s clear there’s still plenty of room for startups to disrupt the space.
+mean calling multiple different therapists. And yet, many therapists still struggle to fill their caseloads. 
+
+It’s clear there’s still plenty of room for startups to improve the space.
 
 
 
