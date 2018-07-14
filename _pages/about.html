@@ -9,7 +9,11 @@ permalink: /about/
         <div class="author-image-container">
             <img src="{{site.baseurl}}/assets/img/{% if site.author_photo %}{{site.author_photo}}{% endif %}" alt="{{site.author}}">
         </div>
-      <p class="text-center">Download my <a class="link" href="{{site.resume_url}}"> resume </a> here.</p>
+        <div class="text-center">
+            <a href="{{site.resume_url}}"> tech resume</a>
+            |
+            <a href="{{site.music_resume_url}}"> music resume </a>
+        </div>
     </section>
     <section class="about-body">
         {{ site.user_description_short | markdownify }}

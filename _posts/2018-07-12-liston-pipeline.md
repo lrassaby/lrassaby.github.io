@@ -157,8 +157,6 @@ Pipeline | CPU Cluster | GPU Cluster Size | Time | Cost Per Run
 Before | 100 instances | 300 instances | 8 hours | $200-300
 After | 10 m3.8xlarge or similar instances | 10 p3.2xlarge instances | 2 hours | $10-20
 
-
-
 [stanford-paper]: https://graphics.stanford.edu/papers/lfmicroscope/
 [liston-lab]: https://www.listonlab.net/
 [liston-aws-architecture]: /assets/img/liston-aws-architecture.png "AWS Architecture"
