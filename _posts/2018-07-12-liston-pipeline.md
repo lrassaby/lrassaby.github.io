@@ -4,6 +4,7 @@ title: Liston Lab Light Field Microscopy Pipeline
 date: 2018-07-12 00:00:00 -0000
 tags: [projects]
 image: lfmicroscope-crayons.jpg
+published: false
 ---
 
 Light field microscopes are regular microscopes that have been retrofitted with a microlens array. With those extra lenses,
