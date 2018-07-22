@@ -1,37 +1,18 @@
 ---
 layout: post
-title: Liston Lab Light Field Microscopy Pipeline
+title: AWS Batch Array Jobs and GPU Processing
 date: 2018-07-22 00:00:00 -0000
 tags: [projects]
-image: lfmicroscope-crayons.jpg
-published: false
+image: hpc.jpg
 ---
 
-Light field microscopes are regular microscopes that have been retrofitted with a microlens array. With those extra lenses,
-researchers can create a 3D model of the object a microscope is focusing on. The code to turn 2D images into 3D images, 
-LFAnalyze, is a pipeline that runs a series of steps on a cluster of up to 300 nodes.
+For a recent contract job, I had to build a batch computing pipeline for scientific computation.
 
-The steps in LFAnalyze's pipeline are:
-1. Image normalization – converts the images into a standard format 
-2. Precompute 2D to 3D transforms – CPU processing on up to 100 machines
-3. Calibration – Calibrating the algorithm based on optical parameters, which runs on one machine
-4. Converting 2D images to 3D images – GPU machine learning processing on up to 300 machines
-
-Weill-Cornell's [Liston Lab][liston-lab] asked me to help modernize LFAnalyze, with the goals of improving stability, speed, 
-and cost. I started the project by learning about light field microscopy and the codebase.
-
-## Background
-
-This 2006 video does a great job explaining light field microscopy, courtesy of Stanford's 
-[Light Field Microscopy][stanford-paper] lab, where the technique and LFAnalyze code were first developed.
-
-<video controls style="width: 100%; max-width: 640px; display: block; margin: 30px auto;">
-  <source src="/assets/video/lfmicroscope-intro.mp4" type="video/mp4">
-</video>
-
-
-Previously, code was deployed manually and jobs were queued through a combination of RabbitMQ, Celery, and 
-Redis. 
+The steps were:
+1. A pre-processing step running across a small CPU cluster
+2. A processing step running on a 100-machine CPU cluster
+3. A calibration step running on one machine
+4. A processing step running on a 100-machine GPU cluster
 
 ## Architecture
 
@@ -41,7 +22,7 @@ users to run jobs in a scalable cluster and chain them together into pipelines.
 
 The biggest issue I ran into was gaps in documentation, particularly around AWS Batch and using GPUs inside Docker containers. 
 
-![liston-aws-architecture]
+![aws-architecture]
 
 The architecture I ended up choosing uses CircleCI to push Docker images to Amazon ECR. Those images are later used by 
 AWS Batch to launch ECS clusters to run jobs on CPU and GPU clusters. That's a bit of a mouthful, so I'll try to unpack the architecture in 
@@ -158,6 +139,4 @@ Before | ~100 instances | ~100 instances | 8 hours | $100-300
 After | ~10 m3.8xlarge or similar instances | ~10 p3.2xlarge instances | 2-4 hours | $10-100
 
 
-[stanford-paper]: https://graphics.stanford.edu/papers/lfmicroscope/
-[liston-lab]: https://www.listonlab.net/
-[liston-aws-architecture]: /assets/img/liston-aws-architecture.png "AWS Architecture"
+[aws-architecture]: /assets/img/aws-architecture.png "AWS Architecture"
