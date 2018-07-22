@@ -148,13 +148,15 @@ try:
 
 ## Benchmarking
 
-On the same reconstructions, here's a rough benchmark for improvements. 
+On the same reconstructions, here's a rough benchmark for improvements. Most of the performance improvement can be attributed
+to the newer hardware the jobs run on. 
 
 {:.table .table-bordered}
 Pipeline | CPU Cluster | GPU Cluster Size | Time | Cost Per Run
 --- | --- | --- | ---  | ---
-Before | 100 instances | 300 instances | 8 hours | $200-300
-After | 10 m3.8xlarge or similar instances | 10 p3.2xlarge instances | 2 hours | $10-20
+Before | ~100 instances | ~100 instances | 8 hours | $100-300
+After | ~10 m3.8xlarge or similar instances | ~10 p3.2xlarge instances | 2-4 hours | $10-100
+
 
 [stanford-paper]: https://graphics.stanford.edu/papers/lfmicroscope/
 [liston-lab]: https://www.listonlab.net/
