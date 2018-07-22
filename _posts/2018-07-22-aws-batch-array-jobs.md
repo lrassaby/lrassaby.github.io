@@ -2,7 +2,7 @@
 layout: post
 title: AWS Batch Array Jobs and GPU Processing
 date: 2018-07-22 00:00:00 -0000
-tags: [projects]
+tags: [projects, tech-blog]
 image: hpc.jpg
 ---
 
