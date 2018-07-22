@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Liston Lab Light Field Microscopy Pipeline
-date: 2018-07-12 00:00:00 -0000
+date: 2018-07-22 00:00:00 -0000
 tags: [projects]
 image: lfmicroscope-crayons.jpg
 published: false
@@ -14,10 +14,10 @@ LFAnalyze, is a pipeline that runs a series of steps on a cluster of up to 300 n
 The steps in LFAnalyze's pipeline are:
 1. Image normalization – converts the images into a standard format 
 2. Precompute 2D to 3D transforms – CPU processing on up to 100 machines
-3. Calibration – Calibrating the algorithm based on optical parameters (One machine)
+3. Calibration – Calibrating the algorithm based on optical parameters, which runs on one machine
 4. Converting 2D images to 3D images – GPU machine learning processing on up to 300 machines
 
-Weill-Cornell's [Liston Lab][liston-lab] asked me to modernize LFAnalyze, with the goals of improving stability, speed, 
+Weill-Cornell's [Liston Lab][liston-lab] asked me to help modernize LFAnalyze, with the goals of improving stability, speed, 
 and cost. I started the project by learning about light field microscopy and the codebase.
 
 ## Background
@@ -30,38 +30,36 @@ This 2006 video does a great job explaining light field microscopy, courtesy of 
 </video>
 
 
-Previously, code was deployed by hand and jobs were queued through a combination of RabbitMQ, Celery, and 
-Redis. The master branch was out of date and the release process was loosely defined.
+Previously, code was deployed manually and jobs were queued through a combination of RabbitMQ, Celery, and 
+Redis. 
 
 ## Architecture
 
-After investigating a few different architectures, I decided that AWS Batch provided the best combination of features we needed. Designed 
+After investigating a few different architectures, I concluded that AWS Batch provided the best combination of features we needed. Designed 
 for high performance computing (HPC), AWS Batch is a thin wrapper around AWS Elastic Container Service that allows
 users to run jobs in a scalable cluster and chain them together into pipelines.
 
 The biggest issue I ran into was gaps in documentation, particularly around AWS Batch and using GPUs inside Docker containers. 
-I'm working on separate articles that dive into specifics on my dev blog to help others who are working on similar 
-projects.
 
 ![liston-aws-architecture]
 
 The architecture I ended up choosing uses CircleCI to push Docker images to Amazon ECR. Those images are later used by 
-AWS Batch to launch ECS clusters to run jobs. That's a bit of a mouthful, so I'll try to unpack the architecture in 
+AWS Batch to launch ECS clusters to run jobs on CPU and GPU clusters. That's a bit of a mouthful, so I'll try to unpack the architecture in 
 the rest of this post.
 
 ## Code Deployment
  
 The first order of business was cleaning up the repository. The master branch was out of date with other branches,
-so I worked with the scientists at Cornell to get the repo up to scratch.
+so I worked with the scientists at Cornell to solve some tech debt. 
 
 Next, I Dockerized the codebase. This was complicated by GPU processing, which is architecture-dependent. 
-My Mac (with an Intel GPU) wouldn't behave in the same way as AWS (NVIDIA). 
+My Mac (with an Intel GPU) wouldn't behave in the same way as AWS (NVIDIA).
 
 I ended up revising this dozens of times before I got it right. Here's a snippet of the Dockerfile ended up with:
 ```docker
 FROM python:2.7-jessie
 
-# ... install other dependencies
+# ... install other dependencies (not shown)
 
 # nvidia-container-runtime
 ENV NVIDIA_VISIBLE_DEVICES all
@@ -84,7 +82,7 @@ RUN mkdir -p /etc/OpenCL/vendors && \
 
 After I got Docker images working, I set up CircleCI to run builds and tests, and deploy images to Amazon's EC2 Container Registry (ECR).
 
-## LFAnalyze Client
+## Getting things running
 
 The goal of the client was to create a simple way to set up, run, and monitor batch jobs.
 
