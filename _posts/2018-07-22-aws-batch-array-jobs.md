@@ -31,7 +31,7 @@ the rest of this post.
 ## Code Deployment
  
 The first order of business was cleaning up the repository. The master branch was out of date with other branches,
-so I worked with the scientists at Cornell to solve some tech debt. 
+so I worked with the scientists to solve some tech debt. 
 
 Next, I Dockerized the codebase. This was complicated by GPU processing, which is architecture-dependent. 
 My Mac (with an Intel GPU) wouldn't behave in the same way as AWS (NVIDIA).
@@ -76,7 +76,7 @@ used by other templates.
 3. Set up a custom GPU AMI based on Amazon Linux with `nvidia-docker2` installed (`deploy_custom_ami.yaml`)
 4. Set up AWS Batch queues, CPU and GPU compute environments of spot instances, and job definitions. (`deploy_batch_env.yaml`)
 
-### LFAnalyze CLI: run, monitor, and stop jobs
+### CLI: run, monitor, and stop jobs
 
 For running the pipeline, I built a simple command line tool that can launch new pipelines, monitor existing ones, and 
 stop jobs if things go wrong.
