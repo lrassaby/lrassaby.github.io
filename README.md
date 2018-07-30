@@ -1,6 +1,8 @@
 # Louis Rassaby - Personal Website
 
-[Visit the site here.](http://rassaby.com/) If you like it, feel free to fork it and make your own version!
+[Visit the site here.](http://rassaby.com/) 
+
+If you like it, feel free to fork it and make your own version!
 
 Tested with:
 - Node v8.0.0
