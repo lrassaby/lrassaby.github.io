@@ -1,7 +1,7 @@
 # Site settings
 title: Louis Rassaby
 description: |
-  Louis Rassaby is a Brooklyn-based software engineer and entrepreneur specializing in Scala and back-end development.
+  Louis Rassaby is a NYC-based software engineer and entrepreneur currently at Google.
   He's the founder of Wirefreight, a customer service platform for freight. Previously, Louis led the new products engineering team
   at Phosphorus Genomics.
 
@@ -13,7 +13,7 @@ projects_title: Home
 # User settings
 user_description_appendix: |
   I created this site to write about my interests: startups and entrepreneurship, design, data-intensive applications,
-  functional programming, AR/VR, and machine learning. Above all, I love using computers to solve big problems.
+  functional programming, AR/VR, and machine learning. I like to use computers to solve problems.
 
   I built this site in [Jekyll][jekyll], and it's hosted for free on [GitHub Pages][gh-pages]. It's open source, so if
   you like it, feel free to fork it on [GitHub][github] and make your own version.
@@ -37,15 +37,17 @@ author: Louis Rassaby
 author_title: Software Engineer
 author_photo: profile-photo.jpg
 user_description_short: |
-  I'm a Brooklyn-based software engineer and entrepreneur. I'm the founder of [Wirefreight][wirefreight], a
-  customer-service SaaS platform for logistics. Previously, I led the new products
-  engineering team at Phosphorus Genomics, analyzing genetic data and educating tens of thousands of people on their risks of
-  developing or passing on genetic diseases.
+  I'm a Brooklyn-based software engineer and entrepreneur currently at Google.
+  
+  I've founded a [couple][wirefreight] of [things][ppp]. Previously, I led the new products team engineering team at
+  Phosphorus Genomics, analyzing genetic data and educating tens of thousands of people on their risks of developing or
+  passing on genetic diseases.
 
   Away from the keyboard, I make food and music. I'm half of a band called [Cellolele][cellolele] and I once played in
   an ad for [Versace][versace].
 
   [scala]: https://www.scala-lang.org/
+  [couple]: https://wirefreight.com/
   [cellolele]: /cellolele-toxic/
   [wirefreight]: http://wirefreight.com/
   [ppp]: http://postpartumproject.com/
@@ -58,7 +60,7 @@ disqus_identifier: rassaby
 ## Tracker
 google_analytics_id: UA-109461282-1
 
-keywords: 'software,engineer,design,scala,cello,music,louis rassaby'
+keywords: 'software,engineer,design,scala,cello,music,louis rassaby,rassaby'
 
 ## URLs
 permalink: ':title/'
